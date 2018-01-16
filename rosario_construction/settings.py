@@ -28,7 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['uriel621.pythonanywhere.com']
 
-
 # Application definition
 
 INSTALLED_APPS = [
