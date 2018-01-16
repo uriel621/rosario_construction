@@ -42033,84 +42033,51 @@ var SomeProjects = function SomeProjects() {
         _react2.default.createElement('hr', null),
         _react2.default.createElement(
             'div',
-            { className: 'row', style: { 'marginTop': '.5rem', 'backgroundColor': '#F9F9F9', 'border': '1px solid rgba(0,0,0,.125)' } },
+            { className: 'row' },
             _react2.default.createElement(
                 'div',
-                { className: 'col-md-7' },
+                { className: 'card col-sm-12 col-md-6', style: { "width": "20rem" } },
                 _react2.default.createElement(
                     _reactRouterDom.Link,
                     { to: '/services' },
-                    _react2.default.createElement('img', { className: 'img-fluid rounded mb-3 mb-md-0', src: 'static/rosario_construction_app/images/concrete/image_4.jpg', alt: '' })
+                    _react2.default.createElement('img', { style: { 'height': '300px' }, className: 'card-img-top', src: 'static/rosario_construction_app/images/block_walls_1/image_1.jpg', alt: 'Card image cap', 'data-toggle': 'modal', 'data-target': '#Modal1' })
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'card-body' },
+                    _react2.default.createElement(
+                        'h4',
+                        { className: 'card-title' },
+                        'Card title'
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        { className: 'card-text' },
+                        'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+                    )
                 )
             ),
             _react2.default.createElement(
                 'div',
-                { className: 'col-md-5' },
-                _react2.default.createElement(
-                    'h3',
-                    { style: { 'textAlign': 'center', 'color': '#5383d3' } },
-                    'Project One'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.'
-                )
-            )
-        ),
-        _react2.default.createElement('hr', null),
-        _react2.default.createElement(
-            'div',
-            { className: 'row', style: { 'marginTop': '.5rem', 'backgroundColor': '#F9F9F9', 'border': '1px solid rgba(0,0,0,.125)' } },
-            _react2.default.createElement(
-                'div',
-                { className: 'col-md-7' },
+                { className: 'card col-sm-12 col-md-6', style: { "width": "20rem" } },
                 _react2.default.createElement(
                     _reactRouterDom.Link,
                     { to: '/services' },
-                    _react2.default.createElement('img', { className: 'img-fluid rounded mb-3 mb-md-0', src: 'static/rosario_construction_app/images/plaster/image_1.jpg', alt: '' })
-                )
-            ),
-            _react2.default.createElement(
-                'div',
-                { className: 'col-md-5' },
-                _react2.default.createElement(
-                    'h3',
-                    { style: { 'textAlign': 'center', 'color': '#5383d3' } },
-                    'Project Two'
+                    _react2.default.createElement('img', { style: { 'height': '300px' }, className: 'card-img-top', src: 'static/rosario_construction_app/images/concrete/image_1.jpg', alt: 'Card image cap', 'data-toggle': 'modal', 'data-target': '#Modal2' })
                 ),
                 _react2.default.createElement(
-                    'p',
-                    null,
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.'
-                )
-            )
-        ),
-        _react2.default.createElement('hr', null),
-        _react2.default.createElement(
-            'div',
-            { className: 'row', style: { 'marginTop': '.5rem', 'backgroundColor': '#F9F9F9', 'border': '1px solid rgba(0,0,0,.125)' } },
-            _react2.default.createElement(
-                'div',
-                { className: 'col-md-7' },
-                _react2.default.createElement(
-                    _reactRouterDom.Link,
-                    { to: '/services' },
-                    _react2.default.createElement('img', { className: 'img-fluid rounded mb-3 mb-md-0', src: 'static/rosario_construction_app/images/block_walls_1/image_2.jpg', alt: '' })
-                )
-            ),
-            _react2.default.createElement(
-                'div',
-                { className: 'col-md-5' },
-                _react2.default.createElement(
-                    'h3',
-                    { style: { 'textAlign': 'center', 'color': '#5383d3' } },
-                    'Project Three'
-                ),
-                _react2.default.createElement(
-                    'p',
-                    null,
-                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.'
+                    'div',
+                    { className: 'card-body' },
+                    _react2.default.createElement(
+                        'h4',
+                        { className: 'card-title' },
+                        'Card title'
+                    ),
+                    _react2.default.createElement(
+                        'p',
+                        { className: 'card-text' },
+                        'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
+                    )
                 )
             )
         )
