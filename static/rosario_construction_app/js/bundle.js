@@ -24362,7 +24362,7 @@ var App = function (_React$Component) {
                         _react2.default.createElement(_Navigation2.default, null),
                         _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
                         _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _About2.default }),
-                        _react2.default.createElement(_reactRouterDom.Route, { path: '/services', component: _Services2.default }),
+                        _react2.default.createElement(_reactRouterDom.Route, { path: '/gallery', component: _Services2.default }),
                         _react2.default.createElement(_reactRouterDom.Route, { path: '/contact', component: _Contact2.default }),
                         _react2.default.createElement(_reactRouterDom.Route, { path: '/login', component: _Login2.default })
                     ),
@@ -28041,8 +28041,8 @@ var Nav = function (_React$Component) {
                                 { className: 'nav-item' },
                                 _react2.default.createElement(
                                     _reactRouterDom.Link,
-                                    { className: 'nav-link', to: '/services', onClick: this.nav_menu, replace: true },
-                                    'Services'
+                                    { className: 'nav-link', to: '/gallery', onClick: this.nav_menu, replace: true },
+                                    'Gallery'
                                 )
                             ),
                             _react2.default.createElement(
@@ -28267,17 +28267,27 @@ var About = function (_React$Component) {
                         _react2.default.createElement(
                             "p",
                             null,
-                            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat."
+                            "We are a Los Angeles based residential building general contractor and home builder offering kitchen remodeling, room additions, bathroom remodeling and new construction"
                         ),
                         _react2.default.createElement(
                             "p",
                             null,
-                            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!"
+                            "As a construction company our greatest assets are the level of craftsmanship, dedication and experience our employees bring to each project. We have learned that integrity, attention to detail and honesty each step of the way, makes the best working environment for everyone."
                         ),
                         _react2.default.createElement(
                             "p",
                             null,
-                            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?"
+                            "We like to get to know our customers on a first name basis. We treat you like one of the family. On each job we will listen to your wishes and needs, so ultimately you end up with exactly what you envision in your home renovation project."
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            null,
+                            "We do all phases of home improvement. No project is too big or small. Call us today to set up your free in home estimate."
+                        ),
+                        _react2.default.createElement(
+                            "p",
+                            null,
+                            "(505) 400-1198"
                         )
                     )
                 )
@@ -28309,9 +28319,13 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(42);
 
-var _Modal = __webpack_require__(206);
+var _Modal = __webpack_require__(418);
 
 var _Modal2 = _interopRequireDefault(_Modal);
+
+var _Card = __webpack_require__(421);
+
+var _Card2 = _interopRequireDefault(_Card);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28325,7 +28339,9 @@ var jumbotron = {
     paddingTop: "6rem",
     paddingBottom: "6rem",
     marginBottom: 0,
-    backgroundcolor: "#fff"
+    // backgroundcolor: "#fff",
+    backgroundImage: 'url(static/rosario_construction_app/images/other/table.jpg)',
+    backgroundPosition: 'left'
 };
 
 var album = {
@@ -28410,7 +28426,7 @@ var Services = function (_React$Component) {
                     { className: 'jumbotron text-center', style: jumbotron },
                     _react2.default.createElement(
                         'div',
-                        { className: 'container', style: { "maxWidth": "40rem" } },
+                        { className: 'container', style: { "maxWidth": "40rem", "color": "white" } },
                         _react2.default.createElement(
                             'h1',
                             { className: 'jumbotron-heading', style: { "fontWeight": 300 } },
@@ -28418,7 +28434,7 @@ var Services = function (_React$Component) {
                         ),
                         _react2.default.createElement(
                             'p',
-                            { className: 'lead text-muted' },
+                            { className: 'lead' },
                             'Lorem ipsum dolor sit amet consectetur adipiscing elit senectus, urna penatibus tellus diam tristique himenaeos posuere, nisl habitasse duis aptent tortor lobortis dapibus. Bibendum quisque orci phasellus commodo, arcu laoreet.'
                         ),
                         _react2.default.createElement(
@@ -28426,7 +28442,7 @@ var Services = function (_React$Component) {
                             { style: { "marginBottom": 0 } },
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
-                                { className: 'btn btn-primary', to: '/rosario_construction/contact' },
+                                { className: 'btn', style: { "color": "#fff", "borderColor": "#ffc107" }, to: '/contact' },
                                 'Contact'
                             )
                         )
@@ -28434,130 +28450,62 @@ var Services = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     'div',
-                    { className: 'album text-muted', style: album },
+                    { className: 'container' },
                     _react2.default.createElement(
                         'div',
-                        { className: 'container' },
+                        { className: 'album text-muted', style: album },
                         _react2.default.createElement(
                             'div',
-                            { className: 'row' },
+                            { className: 'container' },
                             _react2.default.createElement(
                                 'div',
-                                { className: 'card col-sm-12 col-md-4', style: { "width": "20rem" } },
-                                _react2.default.createElement('img', { style: { 'height': '383px' }, onClick: this.modal_carousel, className: 'card-img-top', src: this.block_walls_1[0], alt: 'Card image cap', 'data-toggle': 'modal', 'data-target': '#Modal1' }),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'card-body' },
-                                    _react2.default.createElement(
-                                        'h4',
-                                        { className: 'card-title' },
-                                        'Card title'
-                                    ),
-                                    _react2.default.createElement(
-                                        'p',
-                                        { className: 'card-text' },
-                                        'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
-                                    )
-                                )
+                                { className: 'row' },
+                                _react2.default.createElement(_Card2.default, {
+                                    title: 'Block Fence',
+                                    paragraph: 'Some quick example text to build on the card title and make up the bulk of the card\'s content',
+                                    picture: this.block_walls_1[0],
+                                    event: this.modal_carousel,
+                                    modal: '#Modal1'
+                                }),
+                                _react2.default.createElement(_Card2.default, {
+                                    title: 'Block Fence',
+                                    paragraph: 'Some quick example text to build on the card title and make up the bulk of the card\'s content',
+                                    picture: this.block_walls_2[0],
+                                    event: this.modal_carousel,
+                                    modal: '#Modal2'
+                                }),
+                                _react2.default.createElement(_Card2.default, {
+                                    title: 'Block Fence',
+                                    paragraph: 'Some quick example text to build on the card title and make up the bulk of the card\'s content',
+                                    picture: this.block_walls_3[0],
+                                    event: this.modal_carousel,
+                                    modal: '#Modal3'
+                                })
                             ),
                             _react2.default.createElement(
                                 'div',
-                                { className: 'card col-sm-12 col-md-4', style: { "width": "20rem" } },
-                                _react2.default.createElement('img', { style: { 'height': '383px' }, onClick: this.modal_carousel, className: 'card-img-top', src: this.block_walls_2[0], alt: 'Card image cap', 'data-toggle': 'modal', 'data-target': '#Modal2' }),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'card-body' },
-                                    _react2.default.createElement(
-                                        'h4',
-                                        { className: 'card-title' },
-                                        'Card title'
-                                    ),
-                                    _react2.default.createElement(
-                                        'p',
-                                        { className: 'card-text' },
-                                        'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'card col-sm-12 col-md-4', style: { "width": "20rem" } },
-                                _react2.default.createElement('img', { style: { 'height': '383px' }, onClick: this.modal_carousel, className: 'card-img-top', src: this.block_walls_3[0], alt: 'Card image cap', 'data-toggle': 'modal', 'data-target': '#Modal3' }),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'card-body' },
-                                    _react2.default.createElement(
-                                        'h4',
-                                        { className: 'card-title' },
-                                        'Card title'
-                                    ),
-                                    _react2.default.createElement(
-                                        'p',
-                                        { className: 'card-text' },
-                                        'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
-                                    )
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'row' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'card col-sm-12 col-md-4', style: { "width": "20rem" } },
-                                _react2.default.createElement('img', { style: { 'height': '383px' }, onClick: this.modal_carousel, className: 'card-img-top', src: this.concrete[0], alt: 'Card image cap', 'data-toggle': 'modal', 'data-target': '#Modal4' }),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'card-body' },
-                                    _react2.default.createElement(
-                                        'h4',
-                                        { className: 'card-title' },
-                                        'Card title'
-                                    ),
-                                    _react2.default.createElement(
-                                        'p',
-                                        { className: 'card-text' },
-                                        'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'card col-sm-12 col-md-4', style: { "width": "20rem" } },
-                                _react2.default.createElement('img', { style: { 'height': '383px' }, onClick: this.modal_carousel, className: 'card-img-top', src: this.tile[0], alt: 'Card image cap', 'data-toggle': 'modal', 'data-target': '#Modal5' }),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'card-body' },
-                                    _react2.default.createElement(
-                                        'h4',
-                                        { className: 'card-title' },
-                                        'Card title'
-                                    ),
-                                    _react2.default.createElement(
-                                        'p',
-                                        { className: 'card-text' },
-                                        'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
-                                    )
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'card col-sm-12 col-md-4', style: { "width": "20rem" } },
-                                _react2.default.createElement('img', { style: { 'height': '383px' }, onClick: this.modal_carousel, className: 'card-img-top', src: this.plaster[0], alt: 'Card image cap', 'data-toggle': 'modal', 'data-target': '#Modal6' }),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'card-body' },
-                                    _react2.default.createElement(
-                                        'h4',
-                                        { className: 'card-title' },
-                                        'Card title'
-                                    ),
-                                    _react2.default.createElement(
-                                        'p',
-                                        { className: 'card-text' },
-                                        'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
-                                    )
-                                )
+                                { className: 'row' },
+                                _react2.default.createElement(_Card2.default, {
+                                    title: 'Block Fence',
+                                    paragraph: 'Some quick example text to build on the card title and make up the bulk of the card\'s content',
+                                    picture: this.concrete[0],
+                                    event: this.modal_carousel,
+                                    modal: '#Modal4'
+                                }),
+                                _react2.default.createElement(_Card2.default, {
+                                    title: 'Block Fence',
+                                    paragraph: 'Some quick example text to build on the card title and make up the bulk of the card\'s content',
+                                    picture: this.tile[0],
+                                    event: this.modal_carousel,
+                                    modal: '#Modal5'
+                                }),
+                                _react2.default.createElement(_Card2.default, {
+                                    title: 'Block Fence',
+                                    paragraph: 'Some quick example text to build on the card title and make up the bulk of the card\'s content',
+                                    picture: this.plaster[0],
+                                    event: this.modal_carousel,
+                                    modal: '#Modal6'
+                                })
                             )
                         )
                     )
@@ -28572,156 +28520,8 @@ var Services = function (_React$Component) {
 exports.default = Services;
 
 /***/ }),
-/* 206 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Images = __webpack_require__(207);
-
-var _Images2 = _interopRequireDefault(_Images);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Modal = function Modal(props) {
-    return _react2.default.createElement(
-        'div',
-        { className: 'modal fade', id: props.modal, tabIndex: '-1', role: 'dialog', 'aria-labelledby': 'exampleModalLabel', 'aria-hidden': 'true' },
-        _react2.default.createElement(
-            'div',
-            { className: 'modal-dialog', role: 'document' },
-            _react2.default.createElement(
-                'div',
-                { className: 'modal-content' },
-                _react2.default.createElement(
-                    'div',
-                    { className: 'modal-header' },
-                    _react2.default.createElement(
-                        'h5',
-                        { className: 'modal-title', id: 'exampleModalLabel' },
-                        'Modal title'
-                    ),
-                    _react2.default.createElement(
-                        'button',
-                        { type: 'button', className: 'close', 'data-dismiss': 'modal', 'aria-label': 'Close' },
-                        _react2.default.createElement(
-                            'span',
-                            { 'aria-hidden': 'true' },
-                            '\xD7'
-                        )
-                    )
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'modal-body' },
-                    _react2.default.createElement(
-                        'div',
-                        { id: 'carouselExampleIndicators', className: 'carousel slide', 'data-ride': 'carousel' },
-                        _react2.default.createElement(
-                            'ol',
-                            { className: 'carousel-indicators' },
-                            _react2.default.createElement('li', { 'data-target': '#carouselExampleIndicators', 'data-slide-to': '0', className: 'active' }),
-                            _react2.default.createElement('li', { 'data-target': '#carouselExampleIndicators', 'data-slide-to': '1' }),
-                            _react2.default.createElement('li', { 'data-target': '#carouselExampleIndicators', 'data-slide-to': '2' })
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'carousel-inner' },
-                            _react2.default.createElement(_Images2.default, { images: props.number_images, pics: props.pics })
-                        ),
-                        _react2.default.createElement(
-                            'a',
-                            { className: 'carousel-control-prev', href: '#carouselExampleIndicators', role: 'button', 'data-slide': 'prev' },
-                            _react2.default.createElement('span', { className: 'carousel-control-prev-icon', 'aria-hidden': 'true' }),
-                            _react2.default.createElement(
-                                'span',
-                                { className: 'sr-only' },
-                                'Previous'
-                            )
-                        ),
-                        _react2.default.createElement(
-                            'a',
-                            { className: 'carousel-control-next', href: '#carouselExampleIndicators', role: 'button', 'data-slide': 'next' },
-                            _react2.default.createElement('span', { className: 'carousel-control-next-icon', 'aria-hidden': 'true' }),
-                            _react2.default.createElement(
-                                'span',
-                                { className: 'sr-only' },
-                                'Next'
-                            )
-                        )
-                    )
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'modal-footer' },
-                    _react2.default.createElement(
-                        'button',
-                        { type: 'button', className: 'btn btn-secondary', 'data-dismiss': 'modal' },
-                        'Close'
-                    )
-                )
-            )
-        )
-    );
-};
-
-exports.default = Modal;
-
-/***/ }),
-/* 207 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Images = function Images(props) {
-    console.log(props.pics);
-    var img = props.pics.map(function (src, index) {
-        var image = null;
-        if (index === 0) {
-            image = _react2.default.createElement(
-                'div',
-                { className: 'carousel-item active', style: { height: 'auto' }, key: index },
-                _react2.default.createElement('img', { className: 'd-block w-100', src: src, alt: 'First slide' })
-            );
-        } else {
-            image = _react2.default.createElement(
-                'div',
-                { className: 'carousel-item', style: { height: 'auto' }, key: index },
-                _react2.default.createElement('img', { className: 'd-block w-100', src: src, alt: 'First slide' })
-            );
-        }
-        return image;
-    });
-    return _react2.default.createElement(
-        'div',
-        null,
-        img
-    );
-};
-
-exports.default = Images;
-
-/***/ }),
+/* 206 */,
+/* 207 */,
 /* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -41955,7 +41755,7 @@ var SomeAbout = function SomeAbout() {
                 _react2.default.createElement(
                     'p',
                     null,
-                    'Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.'
+                    'Building a new home is not a small undertaking. In fact, it is one of the larger tasks an individual or family may involve themselves in. Building requires sound techniques and experienced people.'
                 )
             ),
             _react2.default.createElement(
@@ -41983,17 +41783,17 @@ var SomeAbout = function SomeAbout() {
                 _react2.default.createElement(
                     'h4',
                     { style: header },
-                    'CONCRETE-',
+                    'FREE-',
                     _react2.default.createElement(
                         'span',
                         { style: { 'color': '#5383d3' } },
-                        'CONSTRUCTION'
+                        'ESTIMATING'
                     )
                 ),
                 _react2.default.createElement(
                     'p',
                     null,
-                    'Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.'
+                    'Estimating your project is an important undertaking, giving you keen insight into what you are building and what the costs are, every step of the way. A good Estimate is clear and comprehensive.'
                 )
             )
         )
@@ -42247,6 +42047,191 @@ var Login = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Login;
+
+/***/ }),
+/* 418 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Images = __webpack_require__(419);
+
+var _Images2 = _interopRequireDefault(_Images);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Modal = function Modal(props) {
+  return _react2.default.createElement(
+    'div',
+    { className: 'modal fade', id: props.modal, tabIndex: '-1', role: 'dialog', 'aria-labelledby': 'exampleModalLabel', 'aria-hidden': 'true' },
+    _react2.default.createElement(
+      'div',
+      { className: 'modal-dialog', role: 'document' },
+      _react2.default.createElement(
+        'div',
+        { className: 'modal-content' },
+        _react2.default.createElement(
+          'div',
+          { className: 'modal-header' },
+          _react2.default.createElement(
+            'h5',
+            { className: 'modal-title', id: 'exampleModalLabel' },
+            'Gallery'
+          ),
+          _react2.default.createElement(
+            'button',
+            { type: 'button', className: 'close', 'data-dismiss': 'modal', 'aria-label': 'Close' },
+            _react2.default.createElement(
+              'span',
+              { 'aria-hidden': 'true' },
+              '\xD7'
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'modal-body' },
+          _react2.default.createElement(
+            'div',
+            { id: 'carouselExampleIndicators', className: 'carousel slide', 'data-ride': 'carousel' },
+            _react2.default.createElement(
+              'div',
+              { className: 'carousel-inner' },
+              _react2.default.createElement(_Images2.default, { images: props.number_images, pics: props.pics })
+            ),
+            _react2.default.createElement(
+              'a',
+              { className: 'carousel-control-prev', href: '#carouselExampleIndicators', role: 'button', 'data-slide': 'prev' },
+              _react2.default.createElement('span', { className: 'carousel-control-prev-icon', 'aria-hidden': 'true' }),
+              _react2.default.createElement(
+                'span',
+                { className: 'sr-only' },
+                'Previous'
+              )
+            ),
+            _react2.default.createElement(
+              'a',
+              { className: 'carousel-control-next', href: '#carouselExampleIndicators', role: 'button', 'data-slide': 'next' },
+              _react2.default.createElement('span', { className: 'carousel-control-next-icon', 'aria-hidden': 'true' }),
+              _react2.default.createElement(
+                'span',
+                { className: 'sr-only' },
+                'Next'
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'modal-footer' },
+          _react2.default.createElement(
+            'button',
+            { type: 'button', className: 'btn btn-secondary', 'data-dismiss': 'modal' },
+            'Close'
+          )
+        )
+      )
+    )
+  );
+};
+
+exports.default = Modal;
+
+/***/ }),
+/* 419 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Images = function Images(props) {
+    console.log(props.pics);
+    var img = props.pics.map(function (src, index) {
+        var image = null;
+        if (index === 0) {
+            image = _react2.default.createElement(
+                'div',
+                { className: 'carousel-item active', style: { height: 'auto' }, key: index },
+                _react2.default.createElement('img', { className: 'd-block w-100', src: src, alt: 'First slide' })
+            );
+        } else {
+            image = _react2.default.createElement(
+                'div',
+                { className: 'carousel-item', style: { height: 'auto' }, key: index },
+                _react2.default.createElement('img', { className: 'd-block w-100', src: src, alt: 'First slide' })
+            );
+        }
+        return image;
+    });
+    return _react2.default.createElement(
+        'div',
+        null,
+        img
+    );
+};
+
+exports.default = Images;
+
+/***/ }),
+/* 420 */,
+/* 421 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Row = function Row(props) {
+    return _react2.default.createElement(
+        "div",
+        { className: "card col-sm-12 col-md-4", style: { "width": "20rem" } },
+        _react2.default.createElement("img", { style: { 'height': '383px' }, onClick: props.event, className: "card-img-top", src: props.picture, alt: "Card image cap", "data-toggle": "modal", "data-target": props.modal }),
+        _react2.default.createElement(
+            "div",
+            { className: "card-body" },
+            _react2.default.createElement(
+                "h4",
+                { className: "card-title" },
+                props.title
+            ),
+            _react2.default.createElement(
+                "p",
+                { className: "card-text" },
+                props.paragraph
+            )
+        )
+    );
+};
+
+exports.default = Row;
 
 /***/ })
 /******/ ]);

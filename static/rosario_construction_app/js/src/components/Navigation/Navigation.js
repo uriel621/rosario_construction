@@ -24,7 +24,7 @@ class Nav extends React.Component {
                                 <Link className="nav-link" to="/about" onClick={ this.nav_menu } replace>About</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/services" onClick={ this.nav_menu } replace>Services</Link>
+                                <Link className="nav-link" to="/gallery" onClick={ this.nav_menu } replace>Gallery</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/contact" onClick={ this.nav_menu } replace>Contact</Link>

@@ -6,18 +6,13 @@ const Modal = (props) => (
       <div className="modal-dialog" role="document">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 className="modal-title" id="exampleModalLabel">Gallery</h5>
             <button type="button" className="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div className="modal-body">
                 <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-                    <ol className="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
                     <div className="carousel-inner">
                         <Images images={ props.number_images } pics={ props.pics }/>
                     </div>

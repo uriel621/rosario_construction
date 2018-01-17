@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Modal from './modal_carousel/Modal';
-
-
+import Modal from './ServiceComponents/modal_carousel/Modal';
+import Card from './ServiceComponents/Card';
 
 const jumbotron = {
     paddingTop: "6rem",
     paddingBottom: "6rem",
     marginBottom: 0,
-    backgroundcolor: "#fff"
+    // backgroundcolor: "#fff",
+    backgroundImage: 'url(static/rosario_construction_app/images/other/table.jpg)',
+    backgroundPosition: 'left'
 }
 
 const album = {
@@ -82,88 +83,65 @@ class Services extends React.Component {
             <main role="main">
             { this.state.modal }
                 <section className="jumbotron text-center" style={jumbotron}>
-                    <div className="container" style={{ "maxWidth": "40rem" }}>
+                    <div className="container" style={{ "maxWidth": "40rem", "color":"white" }}>
                         <h1 className="jumbotron-heading" style={{ "fontWeight": 300 }}>Lorem ipsum </h1>
-                        <p className="lead text-muted">Lorem ipsum dolor sit amet consectetur adipiscing elit senectus, urna penatibus tellus diam tristique himenaeos posuere, nisl habitasse duis aptent tortor lobortis dapibus. Bibendum quisque orci phasellus commodo, arcu laoreet.</p>
+                        <p className="lead">Lorem ipsum dolor sit amet consectetur adipiscing elit senectus, urna penatibus tellus diam tristique himenaeos posuere, nisl habitasse duis aptent tortor lobortis dapibus. Bibendum quisque orci phasellus commodo, arcu laoreet.</p>
                         <p style={{ "marginBottom": 0 }}>
-                            <Link className="btn btn-primary" to="/rosario_construction/contact">Contact</Link>
+                            <Link className="btn" style={{ "color":"#fff", "borderColor": "#ffc107" }} to="/contact">Contact</Link>
                         </p>
                     </div>
                 </section>
+                <div className="container">
+                    <div className="album text-muted" style={ album }>
+                        <div className="container">
+                            <div className="row">
+                                <Card 
+                                    title="Block Fence" 
+                                    paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
+                                    picture={ this.block_walls_1[0] }
+                                    event={ this.modal_carousel }
+                                    modal="#Modal1"
+                                />
+                                                                <Card 
+                                    title="Block Fence" 
+                                    paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
+                                    picture={ this.block_walls_2[0] }
+                                    event={ this.modal_carousel }
+                                    modal="#Modal2"
+                                />
+                                <Card 
+                                    title="Block Fence" 
+                                    paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
+                                    picture={ this.block_walls_3[0] }
+                                    event={ this.modal_carousel }
+                                    modal="#Modal3"
+                                />
+                            </div>
 
-                <div className="album text-muted" style={ album }>
-                    <div className="container">
-                        <div className="row">
-                            <div className="card col-sm-12 col-md-4" style={{"width": "20rem"}}>
-                                <img style={{ 'height': '383px' }} onClick={ this.modal_carousel } className="card-img-top" src={ this.block_walls_1[0] } alt="Card image cap" data-toggle="modal" data-target="#Modal1" />
-                                <div className="card-body">
-                                    <h4 className="card-title">Card title</h4>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                            <div className="card col-sm-12 col-md-4" style={{"width": "20rem"}}>
-                                <img style={{ 'height': '383px' }} onClick={ this.modal_carousel } className="card-img-top" src={ this.block_walls_2[0] } alt="Card image cap" data-toggle="modal" data-target="#Modal2" />
-                                <div className="card-body">
-                                    <h4 className="card-title">Card title</h4>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                            <div className="card col-sm-12 col-md-4" style={{"width": "20rem"}}>
-                                <img style={{ 'height': '383px' }} onClick={ this.modal_carousel } className="card-img-top" src={ this.block_walls_3[0] } alt="Card image cap" data-toggle="modal" data-target="#Modal3" />
-                                <div className="card-body">
-                                    <h4 className="card-title">Card title</h4>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
+                            <div className="row">
+                                <Card 
+                                    title="Block Fence" 
+                                    paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
+                                    picture={ this.concrete[0] }
+                                    event={ this.modal_carousel }
+                                    modal="#Modal4"
+                                />
+                                                                <Card 
+                                    title="Block Fence" 
+                                    paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
+                                    picture={ this.tile[0] }
+                                    event={ this.modal_carousel }
+                                    modal="#Modal5"
+                                />
+                                <Card 
+                                    title="Block Fence" 
+                                    paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
+                                    picture={ this.plaster[0] }
+                                    event={ this.modal_carousel }
+                                    modal="#Modal6"
+                                />
                             </div>
                         </div>
-
-                        <div className="row">
-                            <div className="card col-sm-12 col-md-4" style={{"width": "20rem"}}>
-                                <img style={{ 'height': '383px' }} onClick={ this.modal_carousel } className="card-img-top" src={ this.concrete[0] } alt="Card image cap" data-toggle="modal" data-target="#Modal4" />
-                                <div className="card-body">
-                                    <h4 className="card-title">Card title</h4>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                            <div className="card col-sm-12 col-md-4" style={{"width": "20rem"}}>
-                                <img style={{ 'height': '383px' }} onClick={ this.modal_carousel } className="card-img-top" src={ this.tile[0] } alt="Card image cap" data-toggle="modal" data-target="#Modal5" />
-                                <div className="card-body">
-                                    <h4 className="card-title">Card title</h4>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                            <div className="card col-sm-12 col-md-4" style={{"width": "20rem"}}>
-                                <img style={{ 'height': '383px' }} onClick={ this.modal_carousel } className="card-img-top" src={ this.plaster[0] } alt="Card image cap" data-toggle="modal" data-target="#Modal6" />
-                                <div className="card-body">
-                                    <h4 className="card-title">Card title</h4>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* <div className="row">
-                            <div className="card col-sm-12 col-md-4" style={{"width": "20rem"}}>
-                                <img onClick={ this.modal_carousel } className="card-img-top" src={ thumbnail } alt="Card image cap" data-toggle="modal" data-target="#Modal7" />
-                                <div className="card-body">
-                                    <h4 className="card-title">Card title</h4>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                            <div className="card col-sm-12 col-md-4" style={{"width": "20rem"}}>
-                                <img onClick={ this.modal_carousel } className="card-img-top" src={ thumbnail } alt="Card image cap" data-toggle="modal" data-target="#Modal8" />
-                                <div className="card-body">
-                                    <h4 className="card-title">Card title</h4>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                            <div className="card col-sm-12 col-md-4" style={{"width": "20rem"}}>
-                                <img onClick={ this.modal_carousel } className="card-img-top" src={ thumbnail } alt="Card image cap" data-toggle="modal" data-target="#Modal9" />
-                                <div className="card-body">
-                                    <h4 className="card-title">Card title</h4>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                        </div> */}
                     </div>
                 </div>
             </main>

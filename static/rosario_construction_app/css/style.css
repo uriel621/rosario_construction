@@ -36,7 +36,7 @@
     text-align:left;
     font:bold 16px sans-serif;
     padding:55px 50px;
-    margin-top:80px;
+    /* margin-top:80px; */
     bottom:0;
     color:#fff;
   }
@@ -134,4 +134,12 @@
   
   #app > div > div > footer > div > div.col-md-4.col-sm-6.footer-navigation > p > a {
     color: #8f9296;
+  }
+
+  #app > div > div > div > main > section > div > p:nth-child(3) > a:hover{
+    background-color: #9E7700
+  }
+
+  #app > div > div > div > main > section > div > h1{
+    color: #FFC107;
   }

@@ -26,7 +26,7 @@ SECRET_KEY = 'ypq5$hslxf(xpv1$6#muscbpyo&no8t2n)=pi2-^at@c7*x*a1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['uriel621.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'uriel621.pythonanywhere.com']
 
 # Application definition
 

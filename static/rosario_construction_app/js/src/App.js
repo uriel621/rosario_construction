@@ -22,7 +22,7 @@ class App extends React.Component {
                     <Navigation />
                     <Route exact path="/" component={ Home }/>
                     <Route path="/about" component={About}/>
-                    <Route path="/services" component={Services}/>
+                    <Route path="/gallery" component={Services}/>
                     <Route path="/contact" component={Contact}/>
                     <Route path="/login" component={Login}/>
                 </div>
