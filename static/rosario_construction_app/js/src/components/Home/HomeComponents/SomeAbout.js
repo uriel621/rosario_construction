@@ -9,7 +9,7 @@ const header = {
 
 const SomeAbout = () =>
     <div>
-        <div className="row" style={{ 'textAlign': 'center', 'marginTop': '.5rem' }}>
+        <div className="row" style={{ 'textAlign': 'center', 'marginTop': '3rem', 'marginBottom': '3rem' }}>
             <div className="col-lg-4">
                 <h4 style={ header }>GENERAL-<span style={{ 'color': '#5383d3' }}>CONTRACTING</span></h4>
                 <p>Building a new home is not a small undertaking. In fact, it is one of the larger tasks an individual or family may involve themselves in. Building requires sound techniques and experienced people.</p>

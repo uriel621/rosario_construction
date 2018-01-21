@@ -13,7 +13,7 @@ class Carousel extends React.Component {
                     </ol>
                     <div className="carousel-inner" role="listbox">
 
-                        <div className="carousel-item active" style={{"backgroundImage": "url('https://cecoop.coopwebbuilder2.com/sites/cecoop/files/Clark%20Electric%20Coop/Services/Construction/Residentual-Home-Construction%20Pic.jpg')"}}>
+                        <div className="carousel-item active" style={{"backgroundImage": "url('static/rosario_construction_app/images/other/house_frame.jpg')"}}>
                         {/* <div className="carousel-caption d-none d-md-block">
                             <h3>First Slide</h3>
                             <p>This is a description for the first slide.</p>

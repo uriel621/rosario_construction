@@ -36,11 +36,11 @@ class Services extends React.Component {
         this.modal_carousel = this.modal_carousel.bind(this);
         this.modals_array = ['Modal1', 'Modal2', 'Modal3', 'Modal4', 'Modal5', 'Modal6', 'Modal7', 'Modal8', 'Modal9']
         this.block_walls_1 = ['static/rosario_construction_app/images/block_walls_1/image_1.jpg', 'static/rosario_construction_app/images/block_walls_1/image_2.jpg', 'static/rosario_construction_app/images/block_walls_1/image_3.jpg', 'static/rosario_construction_app/images/block_walls_1/image_4.jpg'];
-        this.block_walls_2 = ['static/rosario_construction_app/images/block_walls_2/image_1.jpg', 'static/rosario_construction_app/images/block_walls_2/image_2.jpg', 'static/rosario_construction_app/images/block_walls_1/image_2.jpg'];
+        this.block_walls_2 = ['static/rosario_construction_app/images/block_walls_2/image_1.jpg', 'static/rosario_construction_app/images/block_walls_2/image_2.jpg'];
         this.block_walls_3 = ['static/rosario_construction_app/images/block_walls_3/image_1.jpg'];
         this.concrete = ['static/rosario_construction_app/images/concrete/image_1.jpg', 'static/rosario_construction_app/images/concrete/image_2.jpg', 'static/rosario_construction_app/images/concrete/image_3.jpg', 'static/rosario_construction_app/images/concrete/image_4.jpg'];
         this.tile = ['static/rosario_construction_app/images/tile/image_1.jpg', 'static/rosario_construction_app/images/tile/image_2.jpg', 'static/rosario_construction_app/images/tile/image_3.jpg', 'static/rosario_construction_app/images/tile/image_4.jpg', 'static/rosario_construction_app/images/tile/image_5.jpg', 'static/rosario_construction_app/images/tile/image_6.jpg', 'static/rosario_construction_app/images/tile/image_7.jpg', 'static/rosario_construction_app/images/tile/image_8.jpg'];
-        this.plaster = ['static/rosario_construction_app/images/plaster/image_1.jpg', 'static/rosario_construction_app/plaster/tile/image_2.jpg', 'static/rosario_construction_app/images/plaster/image_3.jpg', 'static/rosario_construction_app/images/plaster/image_4.jpg'];
+        this.plaster = ['static/rosario_construction_app/images/plaster/image_1.jpg', 'static/rosario_construction_app/images/plaster/image_2.jpg', 'static/rosario_construction_app/images/plaster/image_3.jpg', 'static/rosario_construction_app/images/plaster/image_4.jpg'];
         
         this.thumbnail = [thumbnail, thumbnail, thumbnail]
     }
@@ -91,26 +91,26 @@ class Services extends React.Component {
                         </p>
                     </div>
                 </section>
-                <div className="container">
-                    <div className="album text-muted" style={ album }>
-                        <div className="container">
-                            <div className="row">
+                <div>
+                    <div className="album" style={ album }>
+                        <div className="">
+                            <div className="row" style={{ "margin": "0 auto" }}>
                                 <Card 
-                                    title="Block Fence" 
+                                    title="Block" 
                                     paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
                                     picture={ this.block_walls_1[0] }
                                     event={ this.modal_carousel }
                                     modal="#Modal1"
                                 />
-                                                                <Card 
-                                    title="Block Fence" 
+                                <Card 
+                                    title="Block" 
                                     paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
                                     picture={ this.block_walls_2[0] }
                                     event={ this.modal_carousel }
                                     modal="#Modal2"
                                 />
                                 <Card 
-                                    title="Block Fence" 
+                                    title="Block" 
                                     paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
                                     picture={ this.block_walls_3[0] }
                                     event={ this.modal_carousel }
@@ -118,23 +118,23 @@ class Services extends React.Component {
                                 />
                             </div>
 
-                            <div className="row">
+                            <div className="row" style={{ "margin": "0 auto" }}>
                                 <Card 
-                                    title="Block Fence" 
+                                    title="Concrete" 
                                     paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
                                     picture={ this.concrete[0] }
                                     event={ this.modal_carousel }
                                     modal="#Modal4"
                                 />
-                                                                <Card 
-                                    title="Block Fence" 
+                                <Card 
+                                    title="Tile" 
                                     paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
                                     picture={ this.tile[0] }
                                     event={ this.modal_carousel }
                                     modal="#Modal5"
                                 />
                                 <Card 
-                                    title="Block Fence" 
+                                    title="Stucco" 
                                     paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
                                     picture={ this.plaster[0] }
                                     event={ this.modal_carousel }
