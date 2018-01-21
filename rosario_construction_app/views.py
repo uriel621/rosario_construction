@@ -20,11 +20,13 @@ def post(request):
         email = request.POST['email']
         message = request.POST['message']
 
-        # clients_info = Clients_info(full_name=name, phone_number=phone, email=email, message=message)
-        # clients_info.save()
+        clients_info = Clients_info(full_name=name, phone_number=phone, email=email, message=message)
+        clients_info.save()
 
         return HttpResponse('621')
 
 def contacts(request):
-    return render(request, 'rosario_construction_app/contacts.html')
+    contacts = Clients_info.objects.order_by('full_name')
+    contacts = {'contacts': contacts}
+    return render(request, 'rosario_construction_app/contacts.html', context=contacts)
         
