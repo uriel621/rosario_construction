@@ -28004,7 +28004,7 @@ var Nav = function (_React$Component) {
                     { className: 'container' },
                     _react2.default.createElement(
                         _reactRouterDom.Link,
-                        { className: 'navbar-brand', to: '/', onClick: window.scrollTo(0, 0), replace: true },
+                        { style: { 'fontSize': '18px' }, className: 'navbar-brand', to: '/', onClick: window.scrollTo(0, 0), replace: true },
                         'Strong Construction & Service'
                     ),
                     _react2.default.createElement(
@@ -28052,15 +28052,6 @@ var Nav = function (_React$Component) {
                                     _reactRouterDom.Link,
                                     { className: 'nav-link', to: '/contact', onClick: this.nav_menu, replace: true },
                                     'Contact'
-                                )
-                            ),
-                            _react2.default.createElement(
-                                'li',
-                                { className: 'nav-item' },
-                                _react2.default.createElement(
-                                    'a',
-                                    { className: 'nav-link', href: '/login', replace: 'true' },
-                                    'Login'
                                 )
                             )
                         )
@@ -28165,7 +28156,7 @@ var Footer = function (_React$Component) {
                             _react2.default.createElement(
                                 'p',
                                 { className: 'footer-center-info email text-left' },
-                                '505 400-1198'
+                                '(505) 459-2409'
                             )
                         ),
                         _react2.default.createElement(
@@ -28177,8 +28168,8 @@ var Footer = function (_React$Component) {
                                 null,
                                 _react2.default.createElement(
                                     'a',
-                                    { href: 'mailto:uriel621@live.com' },
-                                    'uriel621@live.com'
+                                    { style: { 'fontSize': '13px' }, href: 'mailto:strongconstruction01@gmail.com' },
+                                    'strongconstruction01@gmail.com'
                                 )
                             )
                         )
@@ -28195,7 +28186,7 @@ var Footer = function (_React$Component) {
                         _react2.default.createElement(
                             'p',
                             null,
-                            'Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.'
+                            'We (Strong Construction & Service) are commercial and residential concrete contractors. We are experts in concrete job interpretation, design and implementation. We make concrete projects sound, functional and aesthetically pleasing.'
                         )
                     )
                 )
@@ -28267,7 +28258,7 @@ var About = function (_React$Component) {
                         _react2.default.createElement(
                             "p",
                             null,
-                            "We are a Los Angeles based residential building general contractor and home builder offering kitchen remodeling, room additions, bathroom remodeling and new construction"
+                            "We are a Albuquerque based residential building general contractor and home builder offering concrete, block walls, interior remodeling, room additions, tile, and new construction"
                         ),
                         _react2.default.createElement(
                             "p",
@@ -28286,8 +28277,8 @@ var About = function (_React$Component) {
                         ),
                         _react2.default.createElement(
                             "p",
-                            null,
-                            "(505) 400-1198"
+                            { style: { color: 'rgb(83, 131, 211)' } },
+                            "(505) 459-2409"
                         )
                     )
                 )
@@ -28430,12 +28421,12 @@ var Services = function (_React$Component) {
                         _react2.default.createElement(
                             'h1',
                             { className: 'jumbotron-heading', style: { "fontWeight": 300 } },
-                            'Lorem ipsum '
+                            'Gallery'
                         ),
                         _react2.default.createElement(
                             'p',
                             { className: 'lead' },
-                            'Lorem ipsum dolor sit amet consectetur adipiscing elit senectus, urna penatibus tellus diam tristique himenaeos posuere, nisl habitasse duis aptent tortor lobortis dapibus. Bibendum quisque orci phasellus commodo, arcu laoreet.'
+                            'Initially we will meet with you to discuss what you are looking for and spend time reviewing your needs. Since designing is a collaborative effort this phase is important when beginning a project. See what\u2019s possible by exploring floor plans and design options prior to signing a comprehensive remodeling contract.'
                         ),
                         _react2.default.createElement(
                             'p',
@@ -28444,6 +28435,68 @@ var Services = function (_React$Component) {
                                 _reactRouterDom.Link,
                                 { className: 'btn', style: { "color": "#fff", "borderColor": "#ffc107" }, to: '/contact' },
                                 'Contact'
+                            )
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { style: { 'marginTop': '3rem' }, className: 'card' },
+                    _react2.default.createElement(
+                        'h5',
+                        { className: 'card-header' },
+                        'Service'
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'card-body' },
+                        _react2.default.createElement(
+                            'h5',
+                            { className: 'card-title' },
+                            'Our services include but are not limited to:'
+                        ),
+                        _react2.default.createElement(
+                            'ul',
+                            { className: 'card-text' },
+                            _react2.default.createElement(
+                                'li',
+                                null,
+                                'Hillside foundations: retaining walls'
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                null,
+                                'Concrete structural: foundations, slabs and walls'
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                null,
+                                'Hardscape paving: walkways, patios, driveways, pool-decks, stamped, colored-washed, exposed aggregate'
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                null,
+                                'Masonry/Stone/Block: of all types- interior and exterior'
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                null,
+                                'Concrete polishing: grinding, staining and burnishing'
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                null,
+                                'Specialty items: outdoor kitchen areas, fire-pits, re-coloring, staining and retro-fitting new designs into existing concrete'
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                null,
+                                'Concrete floor stenciling and engraving'
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                null,
+                                'Concrete poured on-site: counter-tops, concrete micro toppings and overlays'
                             )
                         )
                     )
@@ -28462,22 +28515,25 @@ var Services = function (_React$Component) {
                                 { className: 'row', style: { "margin": "0 auto" } },
                                 _react2.default.createElement(_Card2.default, {
                                     title: 'Block',
-                                    paragraph: 'Some quick example text to build on the card title and make up the bulk of the card\'s content',
-                                    picture: this.block_walls_1[0],
+                                    paragraph: ''
+                                    // paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
+                                    , picture: this.block_walls_1[0],
                                     event: this.modal_carousel,
                                     modal: '#Modal1'
                                 }),
                                 _react2.default.createElement(_Card2.default, {
                                     title: 'Block',
-                                    paragraph: 'Some quick example text to build on the card title and make up the bulk of the card\'s content',
-                                    picture: this.block_walls_2[0],
+                                    paragraph: ''
+                                    // paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
+                                    , picture: this.block_walls_2[0],
                                     event: this.modal_carousel,
                                     modal: '#Modal2'
                                 }),
                                 _react2.default.createElement(_Card2.default, {
                                     title: 'Block',
-                                    paragraph: 'Some quick example text to build on the card title and make up the bulk of the card\'s content',
-                                    picture: this.block_walls_3[0],
+                                    paragraph: ''
+                                    // paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
+                                    , picture: this.block_walls_3[0],
                                     event: this.modal_carousel,
                                     modal: '#Modal3'
                                 })
@@ -28487,22 +28543,25 @@ var Services = function (_React$Component) {
                                 { className: 'row', style: { "margin": "0 auto" } },
                                 _react2.default.createElement(_Card2.default, {
                                     title: 'Concrete',
-                                    paragraph: 'Some quick example text to build on the card title and make up the bulk of the card\'s content',
-                                    picture: this.concrete[0],
+                                    paragraph: ''
+                                    // paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
+                                    , picture: this.concrete[0],
                                     event: this.modal_carousel,
                                     modal: '#Modal4'
                                 }),
                                 _react2.default.createElement(_Card2.default, {
                                     title: 'Tile',
-                                    paragraph: 'Some quick example text to build on the card title and make up the bulk of the card\'s content',
-                                    picture: this.tile[0],
+                                    paragraph: ''
+                                    // paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
+                                    , picture: this.tile[0],
                                     event: this.modal_carousel,
                                     modal: '#Modal5'
                                 }),
                                 _react2.default.createElement(_Card2.default, {
                                     title: 'Stucco',
-                                    paragraph: 'Some quick example text to build on the card title and make up the bulk of the card\'s content',
-                                    picture: this.plaster[0],
+                                    paragraph: ''
+                                    // paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
+                                    , picture: this.plaster[0],
                                     event: this.modal_carousel,
                                     modal: '#Modal6'
                                 })
@@ -28762,7 +28821,7 @@ var Contact = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                { className: 'container' },
+                { className: 'container', style: { 'marginBottom': '3rem' } },
                 _react2.default.createElement(_Map2.default, {
                     googleMapURL: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDhIQ4d9JV5e_JQOqEsBRTzKjdg3sUhpjo&v=3.exp&libraries=geometry,drawing,places',
                     loadingElement: _react2.default.createElement('div', { style: { height: '100%' } }),
@@ -28797,7 +28856,7 @@ var Contact = function (_React$Component) {
                                 _react2.default.createElement(
                                     'span',
                                     null,
-                                    ' (505) 400-1198'
+                                    ' (505) 459-2409'
                                 )
                             ),
                             _react2.default.createElement(
@@ -28806,8 +28865,8 @@ var Contact = function (_React$Component) {
                                 _react2.default.createElement('i', { className: 'fa fa-envelope-o', 'aria-hidden': 'true' }),
                                 _react2.default.createElement(
                                     'a',
-                                    { href: 'mailto:uriel621@live.com' },
-                                    ' uriel621@live.com'
+                                    { href: 'mailto:strongconstruction01@gmail.com' },
+                                    ' strongconstruction01@gmail.com'
                                 )
                             ),
                             _react2.default.createElement(
@@ -41935,9 +41994,53 @@ var SomeAbout = function SomeAbout() {
                     )
                 ),
                 _react2.default.createElement(
-                    'p',
-                    null,
-                    'Building a new home is not a small undertaking. In fact, it is one of the larger tasks an individual or family may involve themselves in. Building requires sound techniques and experienced people.'
+                    'ul',
+                    { style: { 'listStyleType': 'none', 'paddingLeft': 0 } },
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'h5',
+                            null,
+                            'Concrete'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'h5',
+                            null,
+                            'Block Wall'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'h5',
+                            null,
+                            'Stucco'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'h5',
+                            null,
+                            'Tile'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'h5',
+                            null,
+                            'Exterior/Interior Remodeling'
+                        )
+                    )
                 )
             ),
             _react2.default.createElement(
@@ -41956,7 +42059,7 @@ var SomeAbout = function SomeAbout() {
                 _react2.default.createElement(
                     'p',
                     null,
-                    'Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.'
+                    'We take pride in our ability to assemble the best teams for our clients using highly-skilled and qualified subcontractors and suppliers that share our commitment to quality and craftsmanship.'
                 )
             ),
             _react2.default.createElement(
@@ -42003,8 +42106,6 @@ var _reactRouterDom = __webpack_require__(42);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// style={{ "marginTop": "3rem", "marginBottom": "3rem" }}
-// style={{ "margin": "0 auto" }}
 var SomeProjects = function SomeProjects() {
     return _react2.default.createElement(
         "div",
@@ -42012,7 +42113,7 @@ var SomeProjects = function SomeProjects() {
         _react2.default.createElement(
             "h2",
             { style: { 'textAlign': 'center' } },
-            "Some Projects"
+            "Some of our Projects"
         ),
         _react2.default.createElement("hr", null),
         _react2.default.createElement(
@@ -42020,48 +42121,20 @@ var SomeProjects = function SomeProjects() {
             { className: "row", style: { "margin": "0 auto" } },
             _react2.default.createElement(
                 "div",
-                { className: "card col-sm-12 col-md-6", style: { "width": "20rem" } },
+                { className: "card col-sm-12 col-md-6", style: { "width": "20rem", "margin": "0px auto", "marginBottom": "20px", 'border': 0 } },
                 _react2.default.createElement(
                     _reactRouterDom.Link,
                     { to: "/gallery" },
                     _react2.default.createElement("img", { style: { 'height': '300px' }, className: "card-img-top", src: "static/rosario_construction_app/images/block_walls_1/image_1.jpg", alt: "Card image cap", "data-toggle": "modal", "data-target": "#Modal1" })
-                ),
-                _react2.default.createElement(
-                    "div",
-                    { className: "card-body" },
-                    _react2.default.createElement(
-                        "h4",
-                        { className: "card-title" },
-                        "Card title"
-                    ),
-                    _react2.default.createElement(
-                        "p",
-                        { className: "card-text" },
-                        "Some quick example text to build on the card title and make up the bulk of the card's content."
-                    )
                 )
             ),
             _react2.default.createElement(
                 "div",
-                { className: "card col-sm-12 col-md-6", style: { "width": "20rem" } },
+                { className: "card col-sm-12 col-md-6", style: { "width": "20rem", "margin": "0px auto", "marginBottom": "20px", 'border': 0 } },
                 _react2.default.createElement(
                     _reactRouterDom.Link,
                     { to: "/gallery" },
                     _react2.default.createElement("img", { style: { 'height': '300px' }, className: "card-img-top", src: "static/rosario_construction_app/images/concrete/image_2.jpg", alt: "Card image cap", "data-toggle": "modal", "data-target": "#Modal2" })
-                ),
-                _react2.default.createElement(
-                    "div",
-                    { className: "card-body" },
-                    _react2.default.createElement(
-                        "h4",
-                        { className: "card-title" },
-                        "Card title"
-                    ),
-                    _react2.default.createElement(
-                        "p",
-                        { className: "card-text" },
-                        "Some quick example text to build on the card title and make up the bulk of the card's content."
-                    )
                 )
             )
         )

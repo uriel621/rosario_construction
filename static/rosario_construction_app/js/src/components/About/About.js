@@ -10,11 +10,11 @@ class About extends React.Component {
                     </div>
                     <div className="col-lg-6">
                         <h2>About</h2>
-                        <p>We are a Los Angeles based residential building general contractor and home builder offering kitchen remodeling, room additions, bathroom remodeling and new construction</p>
+                        <p>We are a Albuquerque based residential building general contractor and home builder offering concrete, block walls, interior remodeling, room additions, tile, and new construction</p>
                         <p>As a construction company our greatest assets are the level of craftsmanship, dedication and experience our employees bring to each project. We have learned that integrity, attention to detail and honesty each step of the way, makes the best working environment for everyone.</p>
                         <p>We like to get to know our customers on a first name basis. We treat you like one of the family. On each job we will listen to your wishes and needs, so ultimately you end up with exactly what you envision in your home renovation project.</p>
                         <p>We do all phases of home improvement. No project is too big or small. Call us today to set up your free in home estimate.</p>
-                        <p>(505) 400-1198</p>
+                        <p style={{ color: 'rgb(83, 131, 211)'}}>(505) 459-2409</p>
                     </div>
                 </div>
             </div>

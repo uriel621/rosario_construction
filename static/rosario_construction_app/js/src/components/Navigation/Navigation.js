@@ -11,7 +11,7 @@ class Nav extends React.Component {
         return (
             <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
                 <div className="container">
-                <Link className="navbar-brand" to="/" onClick={ window.scrollTo(0, 0) } replace>Strong Construction & Service</Link>
+                <Link style={{ 'fontSize':'18px'}} className="navbar-brand" to="/" onClick={ window.scrollTo(0, 0) } replace>Strong Construction & Service</Link>
                     
                     <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" >
                         <span className="navbar-toggler-icon"></span>
@@ -32,9 +32,9 @@ class Nav extends React.Component {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/contact" onClick={ this.nav_menu } replace>Contact</Link>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <a className="nav-link" href="/login" replace='true'>Login</a>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>

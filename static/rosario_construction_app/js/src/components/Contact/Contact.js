@@ -18,7 +18,7 @@ class Contact extends React.Component {
     }
     render(){
         return (
-            <div className="container">
+            <div className="container" style={{ 'marginBottom': '3rem'}}>
               < Map 
                 googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhIQ4d9JV5e_JQOqEsBRTzKjdg3sUhpjo&v=3.exp&libraries=geometry,drawing,places"
                 loadingElement={<div style={{ height: `100%` }} />}
@@ -36,11 +36,11 @@ class Contact extends React.Component {
                           </p>
                           <p>
                             <i className="fa fa-mobile" aria-hidden="true"></i>
-                              <span> (505) 400-1198</span>
+                              <span> (505) 459-2409</span>
                           </p>
                           <p>
                               <i className="fa fa-envelope-o" aria-hidden="true"></i>
-                              <a href="mailto:uriel621@live.com"> uriel621@live.com</a>
+                              <a href="mailto:strongconstruction01@gmail.com"> strongconstruction01@gmail.com</a>
                           </p>
                           <p>
                               <i className="fa fa-clock-o" aria-hidden="true"></i>

@@ -84,34 +84,53 @@ class Services extends React.Component {
             { this.state.modal }
                 <section className="jumbotron text-center" style={jumbotron}>
                     <div className="container" style={{ "maxWidth": "40rem", "color":"white" }}>
-                        <h1 className="jumbotron-heading" style={{ "fontWeight": 300 }}>Lorem ipsum </h1>
-                        <p className="lead">Lorem ipsum dolor sit amet consectetur adipiscing elit senectus, urna penatibus tellus diam tristique himenaeos posuere, nisl habitasse duis aptent tortor lobortis dapibus. Bibendum quisque orci phasellus commodo, arcu laoreet.</p>
+                        <h1 className="jumbotron-heading" style={{ "fontWeight": 300 }}>Gallery</h1>
+                        <p className="lead">Initially we will meet with you to discuss what you are looking for and spend time reviewing your needs. Since designing is a collaborative effort this phase is important when beginning a project. See what’s possible by exploring floor plans and design options prior to signing a comprehensive remodeling contract.</p>
                         <p style={{ "marginBottom": 0 }}>
                             <Link className="btn" style={{ "color":"#fff", "borderColor": "#ffc107" }} to="/contact">Contact</Link>
                         </p>
                     </div>
                 </section>
+                <div style={{ 'marginTop':'3rem' }} className="card">
+                    <h5 className="card-header">Service</h5>
+                    <div className="card-body">
+                        <h5 className="card-title">Our services include but are not limited to:</h5>
+                        <ul className="card-text">
+                            <li>Hillside foundations: retaining walls</li>
+                            <li>Concrete structural: foundations, slabs and walls</li>
+                            <li>Hardscape paving: walkways, patios, driveways, pool-decks, stamped, colored-washed, exposed aggregate</li>
+                            <li>Masonry/Stone/Block: of all types- interior and exterior</li>
+                            <li>Concrete polishing: grinding, staining and burnishing</li>
+                            <li>Specialty items: outdoor kitchen areas, fire-pits, re-coloring, staining and retro-fitting new designs into existing concrete</li>
+                            <li>Concrete floor stenciling and engraving</li>
+                            <li>Concrete poured on-site: counter-tops, concrete micro toppings and overlays</li>
+                        </ul>
+                    </div>
+                </div>
                 <div>
                     <div className="album" style={ album }>
                         <div className="">
                             <div className="row" style={{ "margin": "0 auto" }}>
                                 <Card 
                                     title="Block" 
-                                    paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
+                                    paragraph="" 
+                                    // paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
                                     picture={ this.block_walls_1[0] }
                                     event={ this.modal_carousel }
                                     modal="#Modal1"
                                 />
                                 <Card 
                                     title="Block" 
-                                    paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
+                                    paragraph="" 
+                                    // paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
                                     picture={ this.block_walls_2[0] }
                                     event={ this.modal_carousel }
                                     modal="#Modal2"
                                 />
                                 <Card 
                                     title="Block" 
-                                    paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
+                                    paragraph="" 
+                                    // paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
                                     picture={ this.block_walls_3[0] }
                                     event={ this.modal_carousel }
                                     modal="#Modal3"
@@ -121,21 +140,24 @@ class Services extends React.Component {
                             <div className="row" style={{ "margin": "0 auto" }}>
                                 <Card 
                                     title="Concrete" 
-                                    paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
+                                    paragraph="" 
+                                    // paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
                                     picture={ this.concrete[0] }
                                     event={ this.modal_carousel }
                                     modal="#Modal4"
                                 />
                                 <Card 
                                     title="Tile" 
-                                    paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
+                                    paragraph="" 
+                                    // paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
                                     picture={ this.tile[0] }
                                     event={ this.modal_carousel }
                                     modal="#Modal5"
                                 />
                                 <Card 
                                     title="Stucco" 
-                                    paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
+                                    paragraph="" 
+                                    // paragraph="Some quick example text to build on the card title and make up the bulk of the card's content" 
                                     picture={ this.plaster[0] }
                                     event={ this.modal_carousel }
                                     modal="#Modal6"

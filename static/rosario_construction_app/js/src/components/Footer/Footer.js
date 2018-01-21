@@ -21,16 +21,16 @@ class Footer extends React.Component {
                             <p>Albuquerque, New Mexico</p>
                         </div>
                         <div><i className="fa fa-phone footer-contacts-icon"></i>
-                            <p className="footer-center-info email text-left">505 400-1198</p>
+                            <p className="footer-center-info email text-left">(505) 459-2409</p>
                         </div>
                         <div><i className="fa fa-envelope footer-contacts-icon"></i>
-                            <p><a href="mailto:uriel621@live.com">uriel621@live.com</a></p>
+                            <p><a style={{ 'fontSize':'13px'}} href="mailto:strongconstruction01@gmail.com">strongconstruction01@gmail.com</a></p>
                         </div>
                     </div>
                     <div className="clearfix visible-sm-block"></div>
                     <div className="col-md-4 footer-about" style={{ 'textAlign':'center' }}>
                         <h4>About the company</h4>
-                        <p>Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.</p>
+                        <p>We (Strong Construction & Service) are commercial and residential concrete contractors. We are experts in concrete job interpretation, design and implementation. We make concrete projects sound, functional and aesthetically pleasing.</p>
                     </div>
                 </div>
             </footer>
