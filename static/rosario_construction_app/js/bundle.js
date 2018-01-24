@@ -24351,7 +24351,7 @@ var App = function (_React$Component) {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
-                _reactRouterDom.HashRouter,
+                _reactRouterDom.BrowserRouter,
                 null,
                 _react2.default.createElement(
                     'div',
@@ -28052,6 +28052,15 @@ var Nav = function (_React$Component) {
                                     _reactRouterDom.Link,
                                     { className: 'nav-link', to: '/contact', onClick: this.nav_menu, replace: true },
                                     'Contact'
+                                )
+                            ),
+                            _react2.default.createElement(
+                                'li',
+                                { className: 'nav-item' },
+                                _react2.default.createElement(
+                                    'a',
+                                    { className: 'nav-link', href: '/login', replace: 'true' },
+                                    'Login'
                                 )
                             )
                         )

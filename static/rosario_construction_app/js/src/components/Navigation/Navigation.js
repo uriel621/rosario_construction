@@ -32,9 +32,9 @@ class Nav extends React.Component {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/contact" onClick={ this.nav_menu } replace>Contact</Link>
                             </li>
-                            {/* <li className="nav-item">
+                            <li className="nav-item">
                                 <a className="nav-link" href="/login" replace='true'>Login</a>
-                            </li> */}
+                            </li>
                         </ul>
                     </div>
                 </div>

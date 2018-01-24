@@ -122,3 +122,13 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     STATIC_DIR
 ]
+
+LOGIN_URL = '/user_login'
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'ever.uriel.621@gmail.com'
+EMAIL_HOST_PASSWORD = 'mercerst.'
