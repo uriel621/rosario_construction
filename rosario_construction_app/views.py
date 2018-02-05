@@ -48,7 +48,7 @@ def contacts(request):
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('index'))
-
+@csrf_exempt
 def user_login(request):
     if request.method == 'POST':
         username = request.POST.get('username')

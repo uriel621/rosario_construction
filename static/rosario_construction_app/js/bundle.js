@@ -42249,8 +42249,6 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -42267,42 +42265,43 @@ var Login = function (_React$Component) {
     }
 
     _createClass(Login, [{
-        key: 'render',
+        key: "render",
         value: function render() {
             return _react2.default.createElement(
-                'div',
-                { className: 'container col-md-6', style: { 'textAlign': 'center', 'height': '300px' } },
+                "div",
+                { "class": "container" },
                 _react2.default.createElement(
-                    'form',
-                    { className: 'form-signin' },
-                    _react2.default.createElement('br', null),
-                    _react2.default.createElement('br', null),
+                    "div",
+                    { "class": "card card-container" },
+                    _react2.default.createElement("img", { "class": "profile-img-card", src: "//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120", alt: "" }),
+                    _react2.default.createElement("img", { id: "profile-img", "class": "profile-img-card", src: "//ssl.gstatic.com/accounts/ui/avatar_2x.png" }),
+                    _react2.default.createElement("p", { id: "profile-name", "class": "profile-name-card" }),
                     _react2.default.createElement(
-                        'label',
-                        { htmlFor: 'inputEmail', className: 'sr-only' },
-                        'Email address'
-                    ),
-                    _react2.default.createElement('input', { type: 'email', id: 'inputEmail', className: 'form-control', placeholder: 'Email address', required: true, autoFocus: true }),
-                    _react2.default.createElement(
-                        'label',
-                        { htmlFor: 'inputPassword', className: 'sr-only' },
-                        'Password'
-                    ),
-                    _react2.default.createElement('input', { type: 'password', id: 'inputPassword', className: 'form-control', placeholder: 'Password', required: true }),
-                    _react2.default.createElement(
-                        'div',
-                        _defineProperty({ className: 'checkbox' }, 'className', 'pull-left'),
+                        "form",
+                        { "class": "form-signin" },
+                        _react2.default.createElement("span", { id: "reauth-email", "class": "reauth-email" }),
+                        _react2.default.createElement("input", { type: "email", id: "inputEmail", "class": "form-control", placeholder: "Email address", required: true, autofocus: true }),
+                        _react2.default.createElement("input", { type: "password", id: "inputPassword", "class": "form-control", placeholder: "Password", required: true }),
                         _react2.default.createElement(
-                            'label',
-                            null,
-                            _react2.default.createElement('input', { type: 'checkbox', value: 'remember-me' }),
-                            ' Remember me'
+                            "div",
+                            { id: "remember", "class": "checkbox" },
+                            _react2.default.createElement(
+                                "label",
+                                null,
+                                _react2.default.createElement("input", { type: "checkbox", value: "remember-me" }),
+                                " Remember me"
+                            )
+                        ),
+                        _react2.default.createElement(
+                            "button",
+                            { "class": "btn btn-lg btn-primary btn-block btn-signin", type: "submit" },
+                            "Sign in"
                         )
                     ),
                     _react2.default.createElement(
-                        'button',
-                        { className: 'btn btn-lg btn-primary btn-block', type: 'submit' },
-                        'Login'
+                        "a",
+                        { href: "#", "class": "forgot-password" },
+                        "Forgot the password?"
                     )
                 )
             );
@@ -42313,6 +42312,23 @@ var Login = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = Login;
+
+// <div className="container" style={{ 'textAlign':'center', 'height':'300px' }}>
+//     <form  className="form-signin">
+//         <br />
+//         <br />
+//         <label htmlFor="inputEmail" className="sr-only">Email address</label>
+//         <input type="email" id="inputEmail" className="form-control" placeholder="Email address" required autoFocus />
+//         <label htmlFor="inputPassword" className="sr-only">Password</label>
+//         <input type="password" id="inputPassword" className="form-control" placeholder="Password" required />
+//         <div className="checkbox" className="pull-left">
+//             <label>
+//                 <input type="checkbox" value="remember-me" /> Remember me
+//             </label>
+//         </div>
+//         <button className="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+//     </form>
+// </div>
 
 /***/ })
 /******/ ]);
