@@ -16,6 +16,20 @@ def index(request):
 def login_page(request):
     return render(request, 'rosario_construction_app/login.html')
 
+@login_required
+def main(request):
+    return render(request, 'rosario_construction_app/main.html')
+
+@login_required
+def invoice(request):
+    return render(request, 'rosario_construction_app/invoice.html')
+
+@login_required
+def contacts(request):
+    contacts = Clients_info.objects.order_by('full_name')
+    contacts = {'contacts': contacts}
+    return render(request, 'rosario_construction_app/contacts.html', context=contacts)
+
 @csrf_exempt
 def post(request):
     if request.method == 'POST':
@@ -38,16 +52,11 @@ def post(request):
 
         return HttpResponse('621')
 
-@login_required
-def contacts(request):
-    contacts = Clients_info.objects.order_by('full_name')
-    contacts = {'contacts': contacts}
-    return render(request, 'rosario_construction_app/contacts.html', context=contacts)
-
 @login_required     
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('index'))
+
 @csrf_exempt
 def user_login(request):
     if request.method == 'POST':
