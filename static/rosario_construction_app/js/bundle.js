@@ -42130,7 +42130,7 @@ var SomeProjects = function SomeProjects() {
             { className: "row", style: { "margin": "0 auto" } },
             _react2.default.createElement(
                 "div",
-                { className: "card col-sm-12 col-md-6", style: { "width": "20rem", "margin": "0px auto", "marginBottom": "20px", 'border': 0 } },
+                { className: "card col-sm-12 col-md-4", style: { "width": "20rem", "margin": "0px auto", "marginBottom": "20px", 'border': 0 } },
                 _react2.default.createElement(
                     _reactRouterDom.Link,
                     { to: "/gallery" },
@@ -42139,7 +42139,7 @@ var SomeProjects = function SomeProjects() {
             ),
             _react2.default.createElement(
                 "div",
-                { className: "card col-sm-12 col-md-6", style: { "width": "20rem", "margin": "0px auto", "marginBottom": "20px", 'border': 0 } },
+                { className: "card col-sm-12 col-md-4", style: { "width": "20rem", "margin": "0px auto", "marginBottom": "20px", 'border': 0 } },
                 _react2.default.createElement(
                     _reactRouterDom.Link,
                     { to: "/gallery" },
