@@ -41925,7 +41925,7 @@ var Carousel = function (_React$Component) {
                             { className: "carousel-inner", role: "listbox" },
                             _react2.default.createElement("div", { className: "carousel-item active", style: { "backgroundImage": "url('static/rosario_construction_app/images/other/house_frame.jpg')" } }),
                             _react2.default.createElement("div", { className: "carousel-item", style: { "backgroundImage": "url('static/rosario_construction_app/images/block_walls_3/image_1.jpg')" } }),
-                            _react2.default.createElement("div", { className: "carousel-item", style: { "backgroundImage": "url('http://www.billfrymire.com/gallery/weblarge/house-plan-blueprints-drafting-construction.jpg')" } })
+                            _react2.default.createElement("div", { className: "carousel-item", style: { "backgroundImage": "url('static/rosario_construction_app/images/other/blueprints.jpg')" } })
                         ),
                         _react2.default.createElement(
                             "a",
