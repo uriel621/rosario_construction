@@ -26,7 +26,7 @@ class Carousel extends React.Component {
                             <p>This is a description for the second slide.</p>
                         </div> */}
                         </div>
-
+ 
                         <div className="carousel-item" style={{"backgroundImage": "url('static/rosario_construction_app/images/other/blueprints.jpg')"}}>
                         {/* <div className="carousel-caption d-none d-md-block">
                             <h3>Third Slide</h3>
