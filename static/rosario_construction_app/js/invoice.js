@@ -111,7 +111,14 @@ $(document).ready(function() {
   $("#paid").blur(update_balance);
    
   $("#addrow").click(function(){
-    $(".item-row:last").after('<tr class="item-row"><td class="item-name"><div class="delete-wpr"><textarea>Item Name</textarea><a onclick="_remove(this)" class="delete" href="javascript:;" title="Remove row">X</a></div></td><td class="description"><textarea>Description</textarea></td><td><textarea class="cost">$0</textarea></td><td><textarea class="qty">0</textarea></td><td><span class="price">$0</span></td></tr>');
+    $(".item-row:last").after(' \
+        <tr class="item-row"> \
+        <td class="item-name" style="width: 175px; border: 0; vertical-align: top;"><div class="delete-wpr" style="position: relative;"><textarea style="width: 100%; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;">Item Name</textarea><a onclick="_remove(this)" style="display: block; color: #000; text-decoration: none; position: absolute; background: #EEEEEE; font-weight: bold; padding: 0px 3px; border: 1px solid; top: -6px; left: -22px; font-family: Verdana; font-size: 12px;" class="delete" href="javascript:;" title="Remove row">X</a></div></td> \
+        <td class="description" style="width: 300px; border: 0; vertical-align: top;"><textarea style="width: 100%; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;">Description</textarea></td> \
+        <td style="border: 0; vertical-align: top;"><textarea style="width: 80px; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;" class="cost">$0</textarea></td> \
+        <td style="border: 0; vertical-align: top;"><textarea style="width: 80px; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;" class="qty">0</textarea></td> \
+        <td style="border: 0; vertical-align: top;"><span class="price">$0</span></td> </tr> \
+    ');
     if ($(".delete").length > 0) $(".delete").show();
     bind();
   });
