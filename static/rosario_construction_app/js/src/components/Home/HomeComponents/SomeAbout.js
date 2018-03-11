@@ -26,7 +26,7 @@ const SomeAbout = () =>
             </div>
             <div className="col-lg-4">
                 <h4 style={ header }>FREE-<span style={{ 'color': '#5383d3' }}>ESTIMATING</span></h4>
-                <p>Estimating your project is an important undertaking, giving you keen insight into what you are building and what the costs are, every step of the way. A good Estimate is clear and comprehensive.</p>
+                <p>Estimating your project is an important undertaking, giving you keen insight into what you are building and what the costs are, every step of the way. A good estimate is clear and comprehensive.</p>
             </div>
         </div>
     </div>

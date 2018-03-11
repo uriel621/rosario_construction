@@ -24,7 +24,7 @@ class Footer extends React.Component {
                             <p className="footer-center-info email text-left">(505) 459-2409</p>
                         </div>
                         <div><i className="fa fa-envelope footer-contacts-icon"></i>
-                            <p><a style={{ 'fontSize':'13px'}} href="mailto:strongconstruction01@gmail.com">strongconstruction01@gmail.com</a></p>
+                            <p><a style={{ 'fontSize':'12.5px'}} href="mailto:strongconstruction01@gmail.com">strongconstruction01@gmail.com</a></p>
                         </div>
                     </div>
                     <div className="clearfix visible-sm-block"></div>

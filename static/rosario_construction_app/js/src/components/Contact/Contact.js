@@ -3,18 +3,35 @@ import Map from './Map.js';
 
 class Contact extends React.Component {
     onSubmit(event){
-        console.log(event)
         event.preventDefault();
-        console.log(document.getElementById('contactForm'))
-        let form_data = new FormData(document.getElementById('contactForm'))
-        console.log(form_data)
-        const request = new XMLHttpRequest();
-        request.open('POST', '/post/', true);
-        request.send(form_data)
-        // request.onload = this.answer  
-        request.onload = function(){
-            console.log(request.response);
-        }  
+        let inputs = document.getElementById('contactForm').children;
+        let control = true;
+        for (let input of inputs) {
+            if (input.children.length) {
+               if (input.children[0].children[1].value.length) {
+                    input.children[0].children[1].style.borderColor = '#ced4da';
+               }
+               else {
+                    input.children[0].children[1].style.borderColor = 'red';
+                    control = false;
+               }
+            }
+        }
+        if (control) {
+            let form_data = new FormData(document.getElementById('contactForm'))
+            const request = new XMLHttpRequest();
+                request.open('POST', '/post/', true);
+                request.send(form_data)
+                request.onload = function(){
+                    // console.log(request.response);
+                }
+            document.querySelector('#send-us-a-mess').innerText = 'Thank You';
+            for (let input of inputs) {
+                if (input.children.length) {
+                   input.children[0].children[1].disabled = true;
+                }
+            }
+        }
     }
     render(){
         return (
@@ -44,14 +61,14 @@ class Contact extends React.Component {
                           </p>
                           <p>
                               <i className="fa fa-clock-o" aria-hidden="true"></i>
-                              <span> Monday - Friday: 9:00 AM to 5:00 PM</span>
+                              <span> Monday - Friday: 8:00 AM to 5:00 PM</span>
                           </p>
                       </div>
 
                       <hr />
                       
                       <div className="col-sm col-md-8">
-                          <h3>Send us a Message</h3>
+                          <h3 id="send-us-a-mess">Send us a Message</h3>
                           <form onSubmit={ this.onSubmit } name="sentMessage" id="contactForm" noValidate="">
                               <div className="control-group form-group">
                                   <div className="controls">

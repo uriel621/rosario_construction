@@ -18,10 +18,10 @@ from django.contrib import admin
 from rosario_construction_app import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^uriel621/', admin.site.urls),
     url(r'^$', views.index, name='index'),
     url(r'^login/', views.login_page, name='login_page'),
-    url(r'^user_login/', views.user_login, name='user_login'),
+    # url(r'^user_login/', views.user_login, name='user_login'),
     url(r'^post/', views.post, name='post'),
     url(r'^contacts/', views.contacts, name='contacts'),
     url(r'^main/', views.contacts, name='main'),

@@ -28177,7 +28177,7 @@ var Footer = function (_React$Component) {
                                 null,
                                 _react2.default.createElement(
                                     'a',
-                                    { style: { 'fontSize': '13px' }, href: 'mailto:strongconstruction01@gmail.com' },
+                                    { style: { 'fontSize': '12.5px' }, href: 'mailto:strongconstruction01@gmail.com' },
                                     'strongconstruction01@gmail.com'
                                 )
                             )
@@ -28812,18 +28812,77 @@ var Contact = function (_React$Component) {
     _createClass(Contact, [{
         key: 'onSubmit',
         value: function onSubmit(event) {
-            console.log(event);
             event.preventDefault();
-            console.log(document.getElementById('contactForm'));
-            var form_data = new FormData(document.getElementById('contactForm'));
-            console.log(form_data);
-            var request = new XMLHttpRequest();
-            request.open('POST', '/post/', true);
-            request.send(form_data);
-            // request.onload = this.answer  
-            request.onload = function () {
-                console.log(request.response);
-            };
+            var inputs = document.getElementById('contactForm').children;
+            var control = true;
+            var _iteratorNormalCompletion = true;
+            var _didIteratorError = false;
+            var _iteratorError = undefined;
+
+            try {
+                for (var _iterator = inputs[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                    var _input = _step.value;
+
+                    if (_input.children.length) {
+                        if (_input.children[0].children[1].value.length) {
+                            _input.children[0].children[1].style.borderColor = '#ced4da';
+                        } else {
+                            _input.children[0].children[1].style.borderColor = 'red';
+                            control = false;
+                        }
+                    }
+                }
+            } catch (err) {
+                _didIteratorError = true;
+                _iteratorError = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion && _iterator.return) {
+                        _iterator.return();
+                    }
+                } finally {
+                    if (_didIteratorError) {
+                        throw _iteratorError;
+                    }
+                }
+            }
+
+            if (control) {
+                var form_data = new FormData(document.getElementById('contactForm'));
+                var request = new XMLHttpRequest();
+                request.open('POST', '/post/', true);
+                request.send(form_data);
+                request.onload = function () {
+                    // console.log(request.response);
+                };
+                document.querySelector('#send-us-a-mess').innerText = 'Thank You';
+                var _iteratorNormalCompletion2 = true;
+                var _didIteratorError2 = false;
+                var _iteratorError2 = undefined;
+
+                try {
+                    for (var _iterator2 = inputs[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+                        var input = _step2.value;
+
+                        if (input.children.length) {
+                            input.children[0].children[1].disabled = true;
+                        }
+                    }
+                } catch (err) {
+                    _didIteratorError2 = true;
+                    _iteratorError2 = err;
+                } finally {
+                    try {
+                        if (!_iteratorNormalCompletion2 && _iterator2.return) {
+                            _iterator2.return();
+                        }
+                    } finally {
+                        if (_didIteratorError2) {
+                            throw _iteratorError2;
+                        }
+                    }
+                }
+            }
         }
     }, {
         key: 'render',
@@ -28885,7 +28944,7 @@ var Contact = function (_React$Component) {
                                 _react2.default.createElement(
                                     'span',
                                     null,
-                                    ' Monday - Friday: 9:00 AM to 5:00 PM'
+                                    ' Monday - Friday: 8:00 AM to 5:00 PM'
                                 )
                             )
                         ),
@@ -28895,7 +28954,7 @@ var Contact = function (_React$Component) {
                             { className: 'col-sm col-md-8' },
                             _react2.default.createElement(
                                 'h3',
-                                null,
+                                { id: 'send-us-a-mess' },
                                 'Send us a Message'
                             ),
                             _react2.default.createElement(
@@ -42087,7 +42146,7 @@ var SomeAbout = function SomeAbout() {
                 _react2.default.createElement(
                     'p',
                     null,
-                    'Estimating your project is an important undertaking, giving you keen insight into what you are building and what the costs are, every step of the way. A good Estimate is clear and comprehensive.'
+                    'Estimating your project is an important undertaking, giving you keen insight into what you are building and what the costs are, every step of the way. A good estimate is clear and comprehensive.'
                 )
             )
         )
