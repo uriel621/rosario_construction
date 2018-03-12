@@ -42,13 +42,29 @@ class Services extends React.Component {
         this.tile = ['static/rosario_construction_app/images/tile/image_1.jpg', 'static/rosario_construction_app/images/tile/image_2.jpg', 'static/rosario_construction_app/images/tile/image_3.jpg', 'static/rosario_construction_app/images/tile/image_4.jpg', 'static/rosario_construction_app/images/tile/image_5.jpg', 'static/rosario_construction_app/images/tile/image_6.jpg', 'static/rosario_construction_app/images/tile/image_7.jpg', 'static/rosario_construction_app/images/tile/image_8.jpg'];
         this.plaster = ['static/rosario_construction_app/images/plaster/image_1.jpg', 'static/rosario_construction_app/images/plaster/image_2.jpg', 'static/rosario_construction_app/images/plaster/image_3.jpg', 'static/rosario_construction_app/images/plaster/image_4.jpg'];
         
-        this.thumbnail = [thumbnail, thumbnail, thumbnail]
+        this.thumbnail = [thumbnail, thumbnail, thumbnail];
+    
     }
+
     modal_carousel(card){
         let modal = card.currentTarget.getAttribute('data-target').substring(1);
-        console.log(modal);
         this.setState({modal: <Modal modal={ modal } pics={ this.if_modal(modal) } />});
+        setTimeout(() => {
+            $('#'+this.state.modal.props.modal).on('hidden.bs.modal', function () {
+                let divs = document.querySelector('#images-for-modal').children;
+                for (let i = 0; i < divs.length; i++) {
+                    if(i === 0) {
+                        divs[i].classList.add("active")
+                    }
+                    else if(divs[i].className === "carousel-item active") {
+                        divs[i].classList.remove("active");
+                    }
+                }
+            })
+        }, 1500);
+
     }
+
     if_modal(modal){
         if(modal === 'Modal1'){
             return this.block_walls_1;
@@ -78,6 +94,7 @@ class Services extends React.Component {
             return this.thumbnail;
         }
     }
+
     render(){
         return (
             <main role="main">
@@ -165,7 +182,7 @@ class Services extends React.Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>       
             </main>
         )
     }

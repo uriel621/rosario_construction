@@ -28381,15 +28381,29 @@ var Services = function (_React$Component) {
         _this.plaster = ['static/rosario_construction_app/images/plaster/image_1.jpg', 'static/rosario_construction_app/images/plaster/image_2.jpg', 'static/rosario_construction_app/images/plaster/image_3.jpg', 'static/rosario_construction_app/images/plaster/image_4.jpg'];
 
         _this.thumbnail = [thumbnail, thumbnail, thumbnail];
+
         return _this;
     }
 
     _createClass(Services, [{
         key: 'modal_carousel',
         value: function modal_carousel(card) {
+            var _this2 = this;
+
             var modal = card.currentTarget.getAttribute('data-target').substring(1);
-            console.log(modal);
             this.setState({ modal: _react2.default.createElement(_Modal2.default, { modal: modal, pics: this.if_modal(modal) }) });
+            setTimeout(function () {
+                $('#' + _this2.state.modal.props.modal).on('hidden.bs.modal', function () {
+                    var divs = document.querySelector('#images-for-modal').children;
+                    for (var i = 0; i < divs.length; i++) {
+                        if (i === 0) {
+                            divs[i].classList.add("active");
+                        } else if (divs[i].className === "carousel-item active") {
+                            divs[i].classList.remove("active");
+                        }
+                    }
+                });
+            }, 1500);
         }
     }, {
         key: 'if_modal',
@@ -28645,7 +28659,7 @@ var Modal = function Modal(props) {
             _react2.default.createElement(
               'div',
               { className: 'carousel-inner' },
-              _react2.default.createElement(_Images2.default, { images: props.number_images, pics: props.pics })
+              _react2.default.createElement(_Images2.default, { images: props.pics.length, pics: props.pics })
             ),
             _react2.default.createElement(
               'a',
@@ -28703,27 +28717,26 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Images = function Images(props) {
-    console.log(props.pics);
     var img = props.pics.map(function (src, index) {
         var image = null;
         if (index === 0) {
             image = _react2.default.createElement(
                 'div',
                 { className: 'carousel-item active', style: { 'maxHeight': '500px' }, key: index },
-                _react2.default.createElement('img', { className: 'd-block w-100', src: src, alt: 'First slide' })
+                _react2.default.createElement('img', { style: { 'height': '100%' }, className: 'd-block w-100', src: src, alt: 'First slide' })
             );
         } else {
             image = _react2.default.createElement(
                 'div',
                 { className: 'carousel-item', style: { 'maxHeight': '500px' }, key: index },
-                _react2.default.createElement('img', { className: 'd-block w-100', src: src, alt: 'First slide' })
+                _react2.default.createElement('img', { style: { 'height': '100%' }, className: 'd-block w-100', src: src, alt: 'First slide' })
             );
         }
         return image;
     });
     return _react2.default.createElement(
         'div',
-        null,
+        { id: 'images-for-modal' },
         img
     );
 };

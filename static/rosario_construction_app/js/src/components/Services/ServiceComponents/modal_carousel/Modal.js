@@ -14,7 +14,7 @@ const Modal = (props) => (
           <div className="modal-body">
                 <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
                     <div className="carousel-inner">
-                        <Images images={ props.number_images } pics={ props.pics }/>
+                        <Images images={ props.pics.length } pics={ props.pics }/>
                     </div>
                     <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
