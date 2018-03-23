@@ -7,10 +7,10 @@
         <br />
         <div id="invoice">
             <div style="width: 800px; margin: 0 auto;" id="page-wrap">
-                <textarea id="header" style="height: 35px; width: 100%; margin: 20px 0; background: #222; text-align: center; color: white; font: bold 15px Helvetica, Sans-Serif; text-decoration: uppercase; letter-spacing: 20px; padding: 8px 0px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;">INVOICE</textarea>
+                <textarea onkeyup="update_value(this)" id="header" style="height: 35px; width: 100%; margin: 20px 0; background: #222; text-align: center; color: white; font: bold 15px Helvetica, Sans-Serif; text-decoration: uppercase; letter-spacing: 20px; padding: 8px 0px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;">INVOICE</textarea>
                 <div id="identity">
                 
-            <textarea id="address" style="width: 250px; height: 150px; float: left; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;">
+            <textarea onkeyup="update_value(this)" id="address" style="width: 250px; height: 150px; float: left; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;">
 Rosario Garcia
 
 1493 Gadwall Rd. NE
@@ -33,7 +33,7 @@ Phone: (505) 459-2409
                         <input  style="margin-bottom: 5px;" id="imageloc" type="text" size="50" value=""><br>
                         (max width: 540px, max height: 100px)
                     </div>
-                    <img id="image" src="{% static 'rosario_construction_app/images/logo.png' %}" alt="logo">
+                    <img id="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQcAAAAiCAYAAABSvRyWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUrSURBVHhe7ZlNUtwwEIVzqKyy4oAsqOImVFFcAopV1sAVhgM41p8tdb+WWjOEGeCp6lvElqX+eXo2k1+//1wthBAioTkQQiA0B0IIhOZACIHQHAghEJoDIQRCcyCEQGgOhBAIzYEQAjnKHK6f3hc1Xh/g3C/P/VtOsB0v92Duj+VheVlrcni6Bfc+h7vX1Jc03pfHGzxvTMqlHaesN0/M5fC8XIN7n8mkOdwujwcQ+M3zcqjMIZrHBSR3GkUkb8uduBfyO6c5nLO+eO/zmoM8TOnldcSBzi8C2du7V5rDmFi8caG+vjlkE7zQr6HLM4dzkoypPdDo2ojL7vk5mDKH5Mj6TSr56ubgzfNc0Bxq0qFuv1qEOYQv2+FL7bxfP5fI3JdDLHKngPl+O0pT9oZtfx82Lp3u10Pvs6+RDnAZuPHtnLDeg+PtgMQ2Ru6FzCXmHfYWddJ75bdYNeKcbn2r9bffSUIM9hvR+nyFuTh668lDxzHXU0R6rtQ766jJa99DPluTdOl7KWhttbnH+yGGrW5rPn+tL++2R1N96dyf1bBk+gfJPQC7iFthmutZQAfw93oWc5NMKWojptz4ddRzUVP1tUqo4KBs5H1HQtop66L9WyGka+uoa6P+zgWHeY3ppcoX17eI6r35/Qeul0nz23Vw3Htu3d56+9c87+9pj/pgqEMRY/GYDY5FomLLudbPpDqtvQC54vh2DRzTF09Ms0ybQ6Q0Pg7dwJ6AtEiTeGES6jcOYw1R3PRvJAYrhgq51ogYIxKxPpRY8HJeirG3f9cchuvvKBGqemu85hDXRnVW9XX21CLPS3nnXNfRPGf2CJPqmMboIBeSOe17pH/rWqqar8iaTvfFGdMsx5lDYWtMG7hXQJG4hpW4fMY6OO08uyj2QdkwCm1hHoIVGYc1txVDEbgtBlxfLLwZc8DPt/h6a/UpIOPx9RST5qjcRA+tuo+Iz4VRPWvVXh5gU4NKX6kedZ6zffHGNMtp5hDJza6C6wlIiaCbgBSIT0h2Me2DsiP37NFfTwrEEimKN17LQ8ZiiQGvb8fY7uupTb+3W5xdg5X7+HoK6Wmn3LvvvXwcxHX2+Oq+6LHvYx5YmT/IYbYv3phm+QBzWBEJTpnDf/hyaItb4zsA9vOaONdY7xRz2MjirJ+bMwf/vta8Gpc5mH0KfJw5yPpKYj5hDHLq08Zr1V7Sm1fHjWo+2xdvTLN8oDnsTcLBHiEC5arONYAbR/IbbSiWPK8nzELd6PaeNiKryVIMEllPSwxz66eaqXU7hy3Q6+1er44Jq68KZ08RVp8jOYbRGkPSOkNtCaweJUrOOHfZr2FfnDHNMmUOIUhVaHSQYLCWCFbifLEGPKBeIRVh1AXdxTI0h0COyTpsewxor9xgdG14eNdcmjl5/fqaIQZrfVTfFF+4WAvYyqX6d6e3qH9tPGkeunaUORjxbvuE3IxaacIzcp1Sp/q6seear+d/lAq4/tW9qb74Yppl2hzQ0I0twYZRGmOJIFPEVA1LMD4h1TGEEeLI19ABgsg1yhBNWNmaXYbVdLB3K4Ys7HqoZ1B97fUDsnehhlqECZVLs6bdW32QdS7WHF9PMUiXzXrF6NdhrwfqHgaoT0DVSGhiZA7IsAvH9WUc0ywf82fFlyEJ2yM4Qn46P8sc8teJfksRQiTf1BzWT0T1WZY/G43PbkJIyzc1B/xbAf+cIMTPD/vNgRDiheZACIHQHAghEJoDIQRCcyCEQGgOhBAIzYEQAqE5EEIAV8s/ukgvBsnyreEAAAAASUVORK5CYII=" alt="logo">
                     </div>
                 
                 </div>
@@ -42,17 +42,17 @@ Phone: (505) 459-2409
                 
                 <div id="customer" style="overflow: hidden;">
 
-                    <textarea id="customer-title" style="font-size: 20px; font-weight: bold; float: left; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;">Customers Title</textarea>
+                    <textarea onkeyup="update_value(this)" id="customer-title" style="font-size: 20px; font-weight: bold; float: left; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;">Customers Title</textarea>
 
                     <table id="meta" style="margin-top: 1px; width: 300px; float: right;">
                         <tbody><tr>
                             <td class="meta-head" style="text-align: left; background: #eee; text-align: right; border: 1px solid black; padding: 5px;">Invoice #</td>
-                            <td style="text-align: right; border: 1px solid black; padding: 5px;"><textarea style="width: 100%; height: 20px; text-align: right; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;">000123</textarea></td>
+                            <td style="text-align: right; border: 1px solid black; padding: 5px;"><textarea onkeyup="update_value(this)" style="width: 100%; height: 20px; text-align: right; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;">000123</textarea></td>
                         </tr>
                         <tr>
 
                             <td class="meta-head" style="text-align: left; background: #eee; text-align: right; border: 1px solid black; padding: 5px;">Date</td>
-                            <td style="text-align: right; border: 1px solid black; padding: 5px;"><textarea style="width: 100%; height: 20px; text-align: right; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;" id="date"></textarea></td>
+                            <td style="text-align: right; border: 1px solid black; padding: 5px;"><textarea onkeyup="update_value(this)" style="width: 100%; height: 20px; text-align: right; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;" id="date"></textarea></td>
                         </tr>
                         <tr>
                             <td class="meta-head" style="text-align: left; background: #eee; text-align: right; border: 1px solid black; padding: 5px;">Amount Due</td>
@@ -75,18 +75,18 @@ Phone: (505) 459-2409
                     </tr>
                     
                     <tr class="item-row">
-                        <td class="item-name" style="width: 175px; border: 0; vertical-align: top;"><div class="delete-wpr" style="position: relative;"><textarea style="width: 100%; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;">Example 1</textarea><a onclick="_remove(this)" style="display: block; color: #000; text-decoration: none; position: absolute; background: #EEEEEE; font-weight: bold; padding: 0px 3px; border: 1px solid; top: -6px; left: -22px; font-family: Verdana; font-size: 12px;" class="delete" href="javascript:;" title="Remove row">X</a></div></td>
-                        <td class="description" style="width: 300px; border: 0; vertical-align: top;"><textarea  style="width: 100%; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;">Just a example but this can be changed</textarea></td>
-                        <td style="border: 0; vertical-align: top;"><textarea style="width: 80px; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;" class="cost">$100.00</textarea></td>
-                        <td style="border: 0; vertical-align: top;"><textarea style="width: 80px; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;" class="qty">1</textarea></td>
+                        <td class="item-name" style="width: 175px; border: 0; vertical-align: top;"><div class="delete-wpr" style="position: relative;"><textarea onkeyup="update_value(this)" style="width: 100%; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;">Example 1</textarea><a onclick="_remove(this)" style="display: block; color: #000; text-decoration: none; position: absolute; background: #EEEEEE; font-weight: bold; padding: 0px 3px; border: 1px solid; top: -6px; left: -22px; font-family: Verdana; font-size: 12px;" class="delete" href="javascript:;" title="Remove row">X</a></div></td>
+                        <td class="description" style="width: 300px; border: 0; vertical-align: top;"><textarea onkeyup="update_value(this)" style="width: 100%; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;">Just a example but this can be changed</textarea></td>
+                        <td style="border: 0; vertical-align: top;"><textarea onkeyup="update_value(this)" style="width: 80px; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;" class="cost">$100.00</textarea></td>
+                        <td style="border: 0; vertical-align: top;"><textarea onkeyup="update_value(this)" style="width: 80px; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;" class="qty">1</textarea></td>
                         <td style="border: 0; vertical-align: top;"><span class="price">$100.00</span></td>
                     </tr>
                     
                     <tr class="item-row">
                         <td class="item-name" style="width: 175px; border: 0; vertical-align: top;"><div class="delete-wpr" style="position: relative;"><textarea style="width: 100%; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;">Example 2</textarea><a onclick="_remove(this)" style="display: block; color: #000; text-decoration: none; position: absolute; background: #EEEEEE; font-weight: bold; padding: 0px 3px; border: 1px solid; top: -6px; left: -22px; font-family: Verdana; font-size: 12px;" class="delete" href="javascript:;" title="Remove row">X</a></div></td>
-                        <td class="description" style="width: 300px; border: 0; vertical-align: top;"><textarea style="width: 100%; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;">Another example and this can also be changed</textarea></td>
-                        <td style="border: 0; vertical-align: top;"><textarea style="width: 80px; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;" class="cost">$50.00</textarea></td>
-                        <td style="border: 0; vertical-align: top;"><textarea style="width: 80px; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;" class="qty">3</textarea></td>
+                        <td class="description" style="width: 300px; border: 0; vertical-align: top;"><textarea onkeyup="update_value(this)" style="width: 100%; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;">Another example and this can also be changed</textarea></td>
+                        <td style="border: 0; vertical-align: top;"><textarea onkeyup="update_value(this)" style="width: 80px; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;" class="cost">$50.00</textarea></td>
+                        <td style="border: 0; vertical-align: top;"><textarea onkeyup="update_value(this)" style="width: 80px; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;" class="qty">3</textarea></td>
                         <td style="border: 0; vertical-align: top;"><span class="price">$50.00</span></td>
                     </tr>
                     
@@ -108,7 +108,7 @@ Phone: (505) 459-2409
                     <tr>
                         <td colspan="2" class="blank" style="border: 0;"> </td>
                         <td style="border-right: 0; text-align: right; border: 1px solid black; padding: 5px;" colspan="2" class="total-line">Amount Paid</td>
-                        <td style="border-left:0; padding:10px; border: 1px solid black; padding: 5px;" class="total-value"><textarea style="height: 20px; width: 80px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;" id="paid">$0.00</textarea></td>
+                        <td style="border-left:0; padding:10px; border: 1px solid black; padding: 5px;" class="total-value"><textarea onkeyup="update_value(this)" style="height: 20px; width: 80px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;" id="paid">$0.00</textarea></td>
                     </tr>
                     <tr>
                         <td colspan="2" class="blank" style="border: 0;"> </td>
@@ -129,12 +129,41 @@ Phone: (505) 459-2409
             <br />
         </div>
         <div class="pull-right">
-            <button onclick="download()" class="btn btn-primary">Download</button>
+            <button id="download" onclick="download()" class="btn btn-primary">Download</button>
         </div>
     </div>
     <script>
+        window.onload = function() {
+            let date_element = document.querySelector('#date')
+                date_element.innerText = date_element.value;
+        }
+
+        function update_value(element) {
+            element.innerText = element.value;
+        }
         function download(){
-            console.log(document.querySelector('#invoice').outerHTML);
+            document.querySelector("#addrow").style.display = 'none';
+            document.querySelector("#download").style.display = 'none';
+            document.querySelectorAll(".delete").forEach(element => element.style.display = 'none')
+            let invoice_html = document.querySelector('#invoice').outerHTML
+            //const request = new XMLHttpRequest();
+            //    request.open('POST', '/invoice/', true);
+            //    request.send(json)
+            //    request.onload = function(data) {
+            //        console.log('621--> ', data)
+            //        let response = JSON.parse(data.target.response);
+            //        console.log(response)
+            //}
+            $.ajax({
+                url:"/invoice/",
+                type: "POST",
+                data: {invoice_html},
+                success:function(response){
+                    document.querySelector("#addrow").style.display = 'block';
+                    document.querySelector("#download").style.display = 'block';
+                    document.querySelectorAll(".delete").forEach(element => element.style.display = 'block')
+                }
+            });
         }
     </script>
     <script type="text/javascript" src="{% static 'rosario_construction_app/libraries/jquery/jquery.min.js' %}"></script>

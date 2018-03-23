@@ -4,6 +4,11 @@ from django.views.decorators.csrf import csrf_exempt
 from rosario_construction_app.models import Clients_info
 from django.core.mail import EmailMessage
 
+import json
+import pdfkit
+path_wkthmltopdf = r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe'
+config = pdfkit.configuration(wkhtmltopdf=path_wkthmltopdf)
+
 from django.contrib.auth import authenticate, login, logout
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
@@ -36,9 +41,15 @@ def login_page(request):
 def main(request):
     return render(request, 'rosario_construction_app/main.html')
 
-@login_required
-def invoice(request):
-    return render(request, 'rosario_construction_app/invoice.html')
+# @login_required
+# @csrf_exempt
+# def invoice(request):
+#     if request.method == 'POST':
+#         print('--->  ', 621)
+#     else:
+#         print('FAIL')
+#     print('INVOICE')
+#     # return render(request, 'rosario_construction_app/invoice.html')
 
 @login_required
 def contacts(request):
@@ -98,7 +109,21 @@ def user_logout(request):
 #         return render(request, 'rosario_construction_app/login.html')
 
 @login_required
+@csrf_exempt
 def invoice(request):
-    contacts = Clients_info.objects.order_by('full_name')
-    contacts = {'contacts': contacts}
-    return render(request, 'rosario_construction_app/invoice.html', context=contacts)
+    if request.method == 'POST':
+        html = request.POST.get('invoice_html')
+        print('name--> ', html)
+        pdfkit.from_string(html, 'out.pdf', configuration=config)
+        email = EmailMessage(
+            'Invoice #{}'.format('621'),
+            '<div style="color:blue">{}</div>'.format('message'),
+             'uriel621@live.com',
+             ['uriel621@live.com']
+        )
+        email.attach_file("out.pdf")        
+        email.content_subtype = "html"
+        email.send()
+    else:
+        print('FAIL')
+    return render(request, 'rosario_construction_app/invoice.html')
