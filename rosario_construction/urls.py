@@ -17,6 +17,9 @@ from django.conf.urls import url
 from django.contrib import admin
 from rosario_construction_app import views
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     url(r'^uriel621/', admin.site.urls),
     url(r'^$', views.index, name='index'),
@@ -28,3 +31,4 @@ urlpatterns = [
     url(r'^invoice/', views.invoice, name='invoice'),
     url(r'^logout/', views.user_logout, name='logout'),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

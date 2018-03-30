@@ -42083,16 +42083,7 @@ var SomeAbout = function SomeAbout() {
                         _react2.default.createElement(
                             'h5',
                             null,
-                            'Concrete'
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'li',
-                        null,
-                        _react2.default.createElement(
-                            'h5',
-                            null,
-                            'Block Wall'
+                            'Plaster'
                         )
                     ),
                     _react2.default.createElement(
@@ -42110,6 +42101,24 @@ var SomeAbout = function SomeAbout() {
                         _react2.default.createElement(
                             'h5',
                             null,
+                            'Concrete'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'h5',
+                            null,
+                            'Block Walls'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'li',
+                        null,
+                        _react2.default.createElement(
+                            'h5',
+                            null,
                             'Tile'
                         )
                     ),
@@ -42119,7 +42128,7 @@ var SomeAbout = function SomeAbout() {
                         _react2.default.createElement(
                             'h5',
                             null,
-                            'Exterior/Interior Remodeling'
+                            'EIFS'
                         )
                     )
                 )

@@ -13,11 +13,12 @@ const SomeAbout = () =>
             <div className="col-lg-4">
                 <h4 style={ header }>GENERAL-<span style={{ 'color': '#5383d3' }}>CONTRACTING</span></h4>
                 <ul style={{ 'listStyleType':'none', 'paddingLeft': 0 }}>
-                    <li><h5>Concrete</h5></li>
-                    <li><h5>Block Wall</h5></li>
+                    <li><h5>Plaster</h5></li>
                     <li><h5>Stucco</h5></li>
+                    <li><h5>Concrete</h5></li>
+                    <li><h5>Block Walls</h5></li>
                     <li><h5>Tile</h5></li>
-                    <li><h5>Exterior/Interior Remodeling</h5></li>
+                    <li><h5>EIFS</h5></li>
                 </ul>
             </div>
             <div className="col-lg-4">

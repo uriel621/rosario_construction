@@ -83,7 +83,7 @@ Phone: (505) 459-2409
                     </tr>
                     
                     <tr class="item-row">
-                        <td class="item-name" style="width: 175px; border: 0; vertical-align: top;"><div class="delete-wpr" style="position: relative;"><textarea style="width: 100%; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;">Example 2</textarea><a onclick="_remove(this)" style="display: block; color: #000; text-decoration: none; position: absolute; background: #EEEEEE; font-weight: bold; padding: 0px 3px; border: 1px solid; top: -6px; left: -22px; font-family: Verdana; font-size: 12px;" class="delete" href="javascript:;" title="Remove row">X</a></div></td>
+                        <td class="item-name" style="width: 175px; border: 0; vertical-align: top;"><div class="delete-wpr" style="position: relative;"><textarea onkeyup="update_value(this)" style="width: 100%; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;">Example 2</textarea><a onclick="_remove(this)" style="display: block; color: #000; text-decoration: none; position: absolute; background: #EEEEEE; font-weight: bold; padding: 0px 3px; border: 1px solid; top: -6px; left: -22px; font-family: Verdana; font-size: 12px;" class="delete" href="javascript:;" title="Remove row">X</a></div></td>
                         <td class="description" style="width: 300px; border: 0; vertical-align: top;"><textarea onkeyup="update_value(this)" style="width: 100%; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;">Another example and this can also be changed</textarea></td>
                         <td style="border: 0; vertical-align: top;"><textarea onkeyup="update_value(this)" style="width: 80px; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;" class="cost">$50.00</textarea></td>
                         <td style="border: 0; vertical-align: top;"><textarea onkeyup="update_value(this)" style="width: 80px; height: 50px; border: 0; font: 14px Georgia, Serif; overflow: hidden; resize: none;" class="qty">3</textarea></td>
@@ -128,22 +128,99 @@ Phone: (505) 459-2409
             <br />
             <br />
         </div>
-        <div class="pull-right">
-            <button id="download" onclick="download()" class="btn btn-primary">Download</button>
+    </div>
+    <br />
+    <div style="height:130px; text-align:center">
+        <div class="">
+            <button style="width:100%" id="download" onclick="download()" class="btn btn-primary btn-md">Download</button>
+        </div>
+        <br id="br" />
+        <div class="">
+            {% comment %} <button style="width:100%" id="email" onclick="download(true)" class="btn btn-primary btn-md">Email</button> {% endcomment %}
+            <button style="width:100%" id="email" type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#emailModal">Email</button>
         </div>
     </div>
+
+    <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="recipient-name" class="col-form-label">Recipient:</label>
+                      <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label">Message:</label>
+                      <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button onclick="download(true)" type="button" class="btn btn-primary">Send message</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+    <!-- Button trigger modal -->
+    <button id="pdf_alert" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" hidden></button>
+        
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Finished</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  PDF has been sent or downloaded
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
     <script>
-        window.onload = function() {
+        document.addEventListener("DOMContentLoaded", function(event) {
             let date_element = document.querySelector('#date')
-                date_element.innerText = date_element.value;
-        }
+            date_element.innerText = date_element.value;
+            if (/Mobi/.test(navigator.userAgent)) {
+                document.querySelector("#download").classList.add('btn-block');
+                document.querySelector("#email").classList.add('btn-block');
+            }
+            else {
+                document.querySelector("#br").remove()
+                document.querySelector("#download").parentNode.style.display = "inline-block"
+                document.querySelector("#download").parentNode.style.width = "48%"
+                document.querySelector("#email").parentNode.style.display = "inline-block"
+                document.querySelector("#email").parentNode.style.width = "48%"
+            }
+        });
 
         function update_value(element) {
             element.innerText = element.value;
         }
-        function download(){
+        function download(send){
             document.querySelector("#addrow").style.display = 'none';
             document.querySelector("#download").style.display = 'none';
+            document.querySelector("#email").style.display = 'none';
             document.querySelectorAll(".delete").forEach(element => element.style.display = 'none')
             let invoice_html = document.querySelector('#invoice').outerHTML
             //const request = new XMLHttpRequest();
@@ -157,11 +234,27 @@ Phone: (505) 459-2409
             $.ajax({
                 url:"/invoice/",
                 type: "POST",
-                data: {invoice_html},
+                data: {invoice_html, send},
                 success:function(response){
                     document.querySelector("#addrow").style.display = 'block';
                     document.querySelector("#download").style.display = 'block';
+                    document.querySelector("#email").style.display = 'block';
                     document.querySelectorAll(".delete").forEach(element => element.style.display = 'block')
+                    if (response === 'download') {
+                        window.open("/media/invoice.pdf")
+                    }
+                    // else if (response === 'email') {
+                    //     console.log('EMAIL SENT')
+                    // }
+
+                    var evt = new MouseEvent("click", {
+                        view: window,
+                        bubbles: true,
+                        cancelable: true,
+                        clientX: 20,
+                        /* whatever properties you want to give it */
+                    });
+                    document.querySelector("#pdf_alert").dispatchEvent(evt);
                 }
             });
         }
