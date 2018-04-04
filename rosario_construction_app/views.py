@@ -113,19 +113,20 @@ def user_logout(request):
 def invoice(request): 
     if request.method == 'POST':
         html = request.POST.get('invoice_html')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
         sent = request.POST.get('send')
         pdfkit.from_string(html, 'media/invoice.pdf', configuration=config)        
         if sent:
-            message = "Email has been sent"
-            # email = EmailMessage(
-            #     'Invoice #{}'.format('621'),
-            #     '<div style="color:blue">{}</div>'.format('message'),
-            #      'uriel621@live.com',
-            #      ['uriel621@live.com']
-            # )
-            # email.attach_file("media/invoice.pdf")        
-            # email.content_subtype = "html"
-            # email.send()
+            email = EmailMessage(
+                'Invoice #{}'.format('621'),
+                '<div style="color:black">{}</div>'.format(message),
+                 'uriel621@live.com',
+                 [email]
+            )
+            email.attach_file("media/invoice.pdf")        
+            email.content_subtype = "html"
+            email.send()
             return HttpResponse('email')
         else:
             return HttpResponse('download')
