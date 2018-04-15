@@ -6,11 +6,11 @@ from django.core.mail import EmailMessage
 
 import json
 import pdfkit
-path_wkthmltopdf = r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe'
+path_wkthmltopdf = 'wkhtmltopdf/bin/wkhtmltopdf.exe'
 config = pdfkit.configuration(wkhtmltopdf=path_wkthmltopdf)
 
 from django.contrib.auth import authenticate, login, logout
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
@@ -53,7 +53,7 @@ def main(request):
 
 @login_required
 def contacts(request):
-    contacts = Clients_info.objects.order_by('full_name')
+    contacts = Clients_info.objects.all().order_by('full_name')
     contacts = {'contacts': contacts}
     return render(request, 'rosario_construction_app/contacts.html', context=contacts)
 
